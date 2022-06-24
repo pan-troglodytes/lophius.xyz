@@ -1,0 +1,714 @@
+@font-face {
+    font-family: 'proggy';
+    src: url('ProggyClean.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+/* general */
+
+
+body {
+	padding-top: 50px;
+	background-attachment: fixed;
+	font-size: 1.5em;
+	font-family: 'proggy';
+	background-image: url("cloud2.png");
+}
+
+
+/* fonts */
+
+h1,
+h3,
+p,
+a,
+label {
+    color: #eeeeee;
+    /*font-size: calc(1.25vh + 1.25vw);*/
+    text-shadow: .1vh .1vh #00ffff;
+
+} 
+
+/* hide radio buttons, custom labels are used instead */
+input[type="radio"] {
+    position: absolute;
+    left: -300px;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+
+
+
+/* hide focus border that shows for a split second when links are clicked*/
+:focus:hover {
+    animation: 
+    pulse
+    .5s
+    linear
+    .2s
+    alternate
+    infinite
+    none
+    running;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0px 0px 0px 10px #00ffff;
+}
+  100% {
+    box-shadow: 0px 0px 0px 10px #ff00ff;
+  }
+}
+
+
+
+
+
+#input-none:checked ~ #gallery > .artwork .gallery-controls .prev {
+    visibility: hidden;
+}
+
+#input-none:checked ~ #gallery > .artwork ~ .artwork .gallery-controls .prev {
+    visibility: unset;
+}
+
+
+#input-none:checked ~ #gallery .last .gallery-controls .next
+{
+	visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* gallery  */
+
+
+#gallery {
+	
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.artwork {
+    margin: 50px;
+    border: 5px solid #ff00ff;
+    width: 400px;
+    text-align: center;
+	border: 5px solid #00ffff;
+	background: #111111;      }
+
+
+.artwork img {
+    width: 100%;
+    
+}
+
+/* hide these in unfocused state */
+.gallery-controls,
+.artwork-controls label,
+.artwork-description,
+.artwork:target .artwork-title a 
+{
+    display: none;
+}
+
+
+/* focused artwork */
+.artwork:target {
+    margin: 0px;
+    width: 0px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #111111;
+    width: 90%;
+    height: 90%;
+    overflow: auto;
+	display: flex;
+	flex-direction: column;
+}
+.artwork:target .artwork-title {
+	order: 1;
+}
+
+.artwork:target .gallery-controls {
+	order: 3;
+}
+
+
+.artwork:target .artwork-description {
+	order: 4;
+}
+ 
+/* scales the image in proportion, to a good size */
+.artwork:target div img { 
+    width: unset;
+    height: 100%;
+    max-width: 100%;
+}
+
+
+/* this are otherwised hidden when unfocused */
+.artwork-controls label {
+	height: 50px;
+	width: 100%;
+    background: #444444;
+    box-shadow: 0px 0px 0px 2px #ff00ff;
+	grid-row: 2/3;
+}
+
+/* 
+ * the artwork uses flexbox, but the artwork-controls in the artwork use grid
+ *
+ * This is because the images must be directly after the rotational controls in a 
+ * logical sense, but to put the images before visually, grid is used
+ *
+ * each artwork control has its own grid column, which is the easiest way to sort them
+ * (flex box would be easier, but as mentioned above, it cant be used)
+ * */
+.artwork:target .artwork-controls {
+	order: 2;
+	display: grid;
+	grid-template-rows: 5fr 1fr;
+	grid-template-columns: 1fr 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 1fr;
+}
+.artwork:target .artwork-images {
+	height: 600px;
+	grid-row: 1/2;
+	grid-column: 1/15;
+}
+.artwork-controls :nth-child(1) {
+	grid-column: 2/3;
+}
+.artwork-controls :nth-child(2) {
+	grid-column: 3/4;
+}
+.artwork-controls :nth-child(3) {
+	grid-column: 4/5;
+}
+.artwork-controls :nth-child(4) {
+	grid-column: 5/6;
+}
+.artwork-controls :nth-child(5) {
+	grid-column: 6/7;
+}
+.artwork-controls :nth-child(6) {
+	grid-column: 7/8;
+}
+.artwork-controls :nth-child(7) {
+	grid-column: 8/9;
+}
+.artwork-controls :nth-child(8) {
+	grid-column: 9/10;
+}
+.artwork-controls :nth-child(9) {
+	grid-column: 10/11;
+}
+.artwork-controls :nth-child(10) {
+	grid-column: 11/12;
+}
+.artwork-controls :nth-child(11) {
+	grid-column: 12/13;
+}
+.artwork-controls :nth-child(12) {
+	grid-column: 13/14;
+}
+
+/* show these when artwork is focused */
+.artwork:target .gallery-controls,
+.artwork:target .artwork-description,
+.artwork:target .artwork-controls label 
+{
+    display:unset;
+}
+
+.artwork:target .gallery-controls a {
+	display: inline-block;
+}
+
+
+/* display image */
+
+/* hide all images */
+.arr
+{
+    display: none;
+}
+
+/* 
+ * if a artwork controller is hovered or checked, show its
+ * corresponding artowrk
+ */
+.c1:checked  ~ div div .i1,  .l1:hover  ~ div .i1,
+.c2:checked  ~ div div .i2,  .l2:hover  ~ div .i2,
+.c3:checked  ~ div div .i3,  .l3:hover  ~ div .i3,
+.c4:checked  ~ div div .i4,  .l4:hover  ~ div .i4,
+.c5:checked  ~ div div .i5,  .l5:hover  ~ div .i5,
+.c6:checked  ~ div div .i6,  .l6:hover  ~ div .i6,
+.c7:checked  ~ div div .i7,  .l7:hover  ~ div .i7,
+.c8:checked  ~ div div .i8,  .l8:hover  ~ div .i8,
+.c9:checked  ~ div div .i9,  .l9:hover  ~ div .i9,
+.c10:checked ~ div div .i10, .l10:hover ~ div .i10,
+.c11:checked ~ div div .i11, .l11:hover ~ div .i11,
+.c12:checked ~ div div .i12, .l12:hover ~ div .i12
+{
+    display: unset;
+}
+
+/*
+ * when an artwork is hovered, hide all the others 
+ * (the one thats currently checked) 
+ * */
+.l1:hover ~ div  img:not(.i1),
+.l2:hover ~ div  img:not(.i2),
+.l3:hover ~ div  img:not(.i3),
+.l4:hover ~ div  img:not(.i4),
+.l5:hover ~ div  img:not(.i5),
+.l6:hover ~ div  img:not(.i6),
+.l7:hover ~ div  img:not(.i7),
+.l8:hover ~ div  img:not(.i8),
+.l9:hover ~ div  img:not(.i9),
+.l10:hover ~ div img:not(.i10),
+.l11:hover ~ div img:not(.i11),
+.l12:hover ~ div img:not(.i12)
+{
+    display: none;
+}
+
+
+
+/* color of checked label */
+.c1:checked ~ div .l1,
+.c2:checked ~ div .l2,
+.c3:checked ~ div .l3,
+.c4:checked ~ div .l4,
+.c5:checked ~ div .l5,
+.c6:checked ~ div .l6,
+.c7:checked ~ div .l7,
+.c8:checked ~ div .l8,
+.c9:checked ~ div .l9,
+.c10:checked ~ div .l10,
+.c11:checked ~ div .l11,
+.c12:checked ~ div .l12 {
+    background: #00ffff;
+}
+
+/* color of focused label */
+.c1:focus ~ div .l1,
+.c2:focus ~ div .l2,
+.c3:focus ~ div .l3,
+.c4:focus ~ div .l4,
+.c5:focus ~ div .l5,
+.c6:focus ~ div .l6,
+.c7:focus ~ div .l7,
+.c8:focus ~ div .l8,
+.c9:focus ~ div .l9,
+.c10:focus ~ div .l10,
+.c11:focus ~ div .l11,
+.c12:focus ~ div .l12 {
+    z-index: 1;
+    box-shadow: 0px 0px 0px 5px #ffffff;
+
+}
+
+/* color of hovered label */
+.artwork-controls label:hover {
+    background: #00aaaa;
+}
+
+
+
+
+/*
+ * when the user closes an art peice, they should focus an invisible div that is fixed
+ * to the top of the page, to keep the scroll position, otherwise the page automatically 
+ * scrolls up
+ */
+#keep-scroll {
+    position: fixed;
+}
+.project {
+	display: grid;
+	grid-template-columns: 45vw 1fr;
+}
+
+.project .project-description {
+	background-color: #111111;
+	text-align: center;
+	grid-column: 1/2;
+	/*margin: 0vw 2vw 2vw 2vw;*/
+	max-height: 50vh;
+	z-index: 3;
+	margin-left: 5vw;
+	border: 30px solid transparent;
+}
+
+.project .project-description p {
+	max-height: 45vh;
+	overflow: scroll;
+
+}
+
+.project p {
+	margin: unset;
+}
+
+.project .project-showcase {
+	padding: 10px;
+	background-color: #111111;
+	grid-column: 2/3;
+	margin: 0px 5% 50vh 20%;
+	max-height: 90vh;
+	overflow: scroll;
+}
+
+.project .project-showcase img,
+.project .project-showcase video {
+	width: 30%;
+	display: inline;
+}
+
+video {
+
+	z-index: 10;
+}
+
+.project .project-showcase div {
+	display: inline;
+}
+.project .project-showcase a {
+	display: none;
+}
+.project:last-child {
+	margin-bottom: 50%;
+}
+
+#bubble {
+	position: fixed;
+	top: 0vh;
+	left: 0vh;
+	height: 60vh;
+	width: 50vw;
+	border: 1vh solid #00ffff;
+	border-radius: 2%;
+	z-index: 2;
+}
+#bubble-background {
+	position: fixed;
+	top: 0vh;
+	left: 0vh;
+	height: 60vh;
+	width: 50vw;
+	background-color: #111111;
+	border: 1vh solid #111111;
+	border-radius: 2%;
+	z-index: 1;
+}
+
+
+#bubble-triangle {
+	position: fixed;
+	bottom: 24vh;
+	left: 12vh;
+	width: 0; 
+	height: 0; 
+	border-left: 4vh solid transparent;
+	border-right: 4vh solid transparent;
+
+	border-top: 15vh solid #00ffff;
+	z-index: 11;
+}
+
+#bubble-triangle-background {
+	position: fixed;
+	bottom: 25.2vh;
+	left: 12.5vh;
+	border-left: 3.6vh solid transparent;
+	border-right: 3.6vh solid transparent;
+
+	border-top: 14vh solid #111111;
+	z-index: 11;
+}
+
+#bubble-frame-top {
+	position: fixed;
+	height: 1vh;
+	width: 45vw;
+	background-color: #00ffff;
+	top: 0vh;
+	left: 5vw;
+	z-index: 4;
+}
+#bubble-frame-bottom {
+	position: fixed;
+	height: 1vh;
+	width: 45vw;
+	background-color: #00ffff;
+	top: 60.86vh;
+	left: 5vw;
+	z-index: 4;
+}
+
+
+
+.project-collage:checked ~ div label{
+	display: none;
+}
+#potato1:checked ~ #pair1 *,
+#potato2:checked ~ #pair2 *,
+#potato3:checked ~ #pair3 * {
+	display: unset;
+	width: 100%;
+}
+
+
+
+/* fill bars z index 4*/
+/* descriptions z index 3*/
+#cute {
+	position: fixed;
+	bottom: 28%;
+	left: 5%;
+	height: 10%;
+}
+
+#narrator {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	height: 30%;
+	z-index:  11;
+	/*width: 130px;*/
+}
+#cloud {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	height: 38.5%;
+	z-index:  4;
+	width: 58vw;
+	/*width: 130px;*/
+}
+
+
+#gallery-intro {
+	background-color: #000000;	
+	padding: 100px;
+}
+
+
+.hide-text {
+	visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+.rainbow span {
+	animation-name: rainbow;
+	text-align: center;
+	text-decoration: underline;
+	font-weight: bold;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+
+.rainbow span {
+	font-size-adjust: inherit;
+	transition: .2s;
+}
+.rainbow span:hover{
+	transition: .2s;
+}
+.a1 {
+	animation-delay: .0s;
+}
+.a2 {
+	animation-delay: .1s;
+}
+.a3 {
+	animation-delay: .2s;
+}
+.a4 {
+	animation-delay: .3s;
+}
+.a5 {
+	animation-delay: .4s;
+}
+.a6 {
+	animation-delay: .5s;
+}
+.a7 {
+	animation-delay: .6s;
+}
+.a8 {
+animation-delay: .7s;
+}
+.a9 {
+animation-delay: .8s;
+}
+.a10 {
+animation-delay: .9s;
+}
+.a11 {
+animation-delay: 1s;
+}
+.a12 {
+animation-delay: 1.1s;
+}
+.a13 {
+animation-delay: 1.2s;
+}
+.a14 {
+animation-delay: 1.3s;
+}
+.a15 {
+animation-delay: 1.4s;
+}
+.a16 {
+animation-delay: 1.5s;
+}
+.a17 {
+animation-delay: 1.6s;
+}
+.a18 {
+animation-delay: 1.7s;
+}
+@keyframes rainbow {
+	0%  {color: hsl(0, 100%, 50%)} 
+	1%  {color: hsl(3, 100%, 50%)}
+	2%  {color: hsl(7, 100%, 50%);}
+	3%  {color: hsl(10, 100%, 50%);}
+	4%  {color: hsl(14, 100%, 50%);}
+	5%  {color: hsl(18, 100%, 50%);}
+	6%  {color: hsl(21, 100%, 50%);}
+	7%  {color: hsl(25, 100%, 50%);}
+	8%  {color: hsl(28, 100%, 50%);}
+	9%  {color: hsl(32, 100%, 50%);}
+	10%  {color: hsl(36, 100%, 50%);}
+	11%  {color: hsl(39, 100%, 50%);}
+	12%  {color: hsl(43, 100%, 50%);}
+	13%  {color: hsl(46, 100%, 50%);}
+	14%  {color: hsl(50, 100%, 50%);}
+	15%  {color: hsl(54, 100%, 50%);}
+	16%  {color: hsl(57, 100%, 50%);}
+	17%  {color: hsl(61, 100%, 50%);}
+	18%  {color: hsl(64, 100%, 50%);}
+	19%  {color: hsl(68, 100%, 50%);}
+	20%  {color: hsl(72, 100%, 50%);}
+	21%  {color: hsl(75, 100%, 50%);}
+	22%  {color: hsl(79, 100%, 50%);}
+	23%  {color: hsl(82, 100%, 50%);}
+	24%  {color: hsl(86, 100%, 50%);}
+	25%  {color: hsl(89, 100%, 50%);}
+	26%  {color: hsl(93, 100%, 50%);}
+	27%  {color: hsl(97, 100%, 50%);}
+	28%  {color: hsl(100, 100%, 50%);}
+	29%  {color: hsl(104, 100%, 50%);}
+	30%  {color: hsl(107, 100%, 50%);}
+	31%  {color: hsl(111, 100%, 50%);}
+	32%  {color: hsl(115, 100%, 50%);}
+	33%  {color: hsl(118, 100%, 50%);}
+	34%  {color: hsl(122, 100%, 50%);}
+	35%  {color: hsl(125, 100%, 50%);}
+	36%  {color: hsl(129, 100%, 50%);}
+	37%  {color: hsl(133, 100%, 50%);}
+	38%  {color: hsl(136, 100%, 50%);}
+	39%  {color: hsl(140, 100%, 50%);}
+	40%  {color: hsl(143, 100%, 50%);}
+	41%  {color: hsl(147, 100%, 50%);}
+	42%  {color: hsl(151, 100%, 50%);}
+	43%  {color: hsl(154, 100%, 50%);}
+	44%  {color: hsl(158, 100%, 50%);}
+	45%  {color: hsl(161, 100%, 50%);}
+	46%  {color: hsl(165, 100%, 50%);}
+	47%  {color: hsl(169, 100%, 50%);}
+	48%  {color: hsl(172, 100%, 50%);}
+	49%  {color: hsl(176, 100%, 50%);}
+	50%  {color: hsl(179, 100%, 50%);}
+	51%  {color: hsl(183, 100%, 50%);}
+	52%  {color: hsl(187, 100%, 50%);}
+	53%  {color: hsl(190, 100%, 50%);}
+	54%  {color: hsl(194, 100%, 50%);}
+	55%  {color: hsl(197, 100%, 50%);}
+	56%  {color: hsl(201, 100%, 50%);}
+	57%  {color: hsl(205, 100%, 50%);}
+	58%  {color: hsl(208, 100%, 50%);}
+	59%  {color: hsl(212, 100%, 50%);}
+	60%  {color: hsl(215, 100%, 50%);}
+	61%  {color: hsl(219, 100%, 50%);}
+	62%  {color: hsl(223, 100%, 50%);}
+	63%  {color: hsl(226, 100%, 50%);}
+	64%  {color: hsl(230, 100%, 50%);}
+	65%  {color: hsl(233, 100%, 50%);}
+	66%  {color: hsl(237, 100%, 50%);}
+	67%  {color: hsl(241, 100%, 50%);}
+	68%  {color: hsl(244, 100%, 50%);}
+	69%  {color: hsl(248, 100%, 50%);}
+	70%  {color: hsl(251, 100%, 50%);}
+	71%  {color: hsl(255, 100%, 50%);}
+	72%  {color: hsl(259, 100%, 50%);}
+	73%  {color: hsl(262, 100%, 50%);}
+	74%  {color: hsl(266, 100%, 50%);}
+	75%  {color: hsl(269, 100%, 50%);}
+	76%  {color: hsl(273, 100%, 50%);}
+	77%  {color: hsl(277, 100%, 50%);}
+	78%  {color: hsl(280, 100%, 50%);}
+	79%  {color: hsl(284, 100%, 50%);}
+	80%  {color: hsl(287, 100%, 50%);}
+	81%  {color: hsl(291, 100%, 50%);}
+	82%  {color: hsl(295, 100%, 50%);}
+	83%  {color: hsl(298, 100%, 50%);}
+	84%  {color: hsl(302, 100%, 50%);}
+	85%  {color: hsl(306, 100%, 50%);}
+	86%  {color: hsl(309, 100%, 50%);}
+	87%  {color: hsl(313, 100%, 50%);}
+	88%  {color: hsl(316, 100%, 50%);}
+	89%  {color: hsl(320, 100%, 50%);}
+	90%  {color: hsl(324, 100%, 50%);}
+	91%  {color: hsl(327, 100%, 50%);}
+	92%  {color: hsl(331, 100%, 50%);}
+	93%  {color: hsl(334, 100%, 50%);}
+	94%  {color: hsl(338, 100%, 50%);}
+	95%  {color: hsl(342, 100%, 50%);}
+	96%  {color: hsl(345, 100%, 50%);}
+	97%  {color: hsl(349, 100%, 50%);}
+	98%  {color: hsl(352, 100%, 50%);}
+	99%  {color: hsl(356, 100%, 50%);}
+	100%  {color: hsl(360, 100%, 50%);}
+}
+
+#cloudback {
+	position: fixed;
+	bottom: 0px;
+	left: 10%;
+	height: 10%;
+	padding: 100px;
+	z-index:  21;
+	font-size:3em;
+}
