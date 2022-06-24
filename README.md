@@ -1,4 +1,4 @@
-#lophius.xyz
+# lophius.xyz
 
 my static website, editing the html css completely raw, boomer style
 
