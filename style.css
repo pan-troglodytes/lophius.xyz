@@ -363,8 +363,6 @@ input[type="radio"] {
 
 .project .project-description p {
 	max-height: 45vh;
-	overflow: scroll;
-
 }
 
 .project p {
@@ -377,7 +375,6 @@ input[type="radio"] {
 	grid-column: 2/3;
 	margin: 0px 5% 50vh 20%;
 	max-height: 90vh;
-	overflow: scroll;
 }
 
 .project .project-showcase img,
