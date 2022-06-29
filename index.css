@@ -1,0 +1,61 @@
+#welcome-screen {
+	background-image: url("hearts.gif");
+	height: 100vh;
+	margin: 0px;
+}
+#welcome-message {
+	background: #dddddd;
+	border: 10px solid #000000;
+	border-radius: 15px;
+	/* animation */
+	width: 80%;
+	animation-name: float;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-duration: 2s;
+	animation-timing-function: ease-in-out;
+	/* centre */
+	position: absolute;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+}
+
+#hello {
+	font-size: 3em;
+}
+
+#welcome-main-border {
+	position: absolute;
+	top:calc(100vh - 70px); /* height of screen resolution - hight of image*/
+	left: 0;
+	width: 100%;
+	padding:0;
+	margin:0;
+	background-image: url("border.gif");
+}
+
+#main {
+	padding: 50vh 5vw;
+	background-color: #343434;
+	background-image: url("background-stars.png");
+}
+
+article {
+	background: #dddddd;
+	border: 10px solid #000000;
+	border-radius: 15px;
+	padding: 50px;
+}
+
+article + article {
+	margin-top: 100px;
+}
+
+@keyframes float {
+	0%   {margin: 150px auto;}
+	100%   {margin: 200px auto;}
+}
+

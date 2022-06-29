@@ -1,0 +1,101 @@
+#bubble-body, #bubble-triangle, #narrator, #cloud, #home {
+	position: fixed;
+}
+
+#bubble-body {
+	top: 0vh;
+	left: 1vh;
+	height: 60vh;
+	width: 50vw;
+	background-color: #111111;
+	border: 1vh solid #111111;
+	border-radius: 10%;
+	z-index: 1;
+}
+
+#cloud {
+	bottom: 0px;
+	left: 0px;
+	height: 38.5%;
+	z-index:  3;
+	width: 58vw;
+}
+
+#bubble-triangle {
+	bottom: 25.2vh;
+	left: 12.5vh;
+	border-left: 3.6vh solid transparent;
+	border-right: 3.6vh solid transparent;
+	border-top: 14vh solid #111111;
+	z-index: 4;
+}
+
+#narrator {
+	bottom: 0px;
+	left: 0px;
+	height: 30%;
+	z-index:  4;
+}
+
+#home {
+	bottom: 0px;
+	left: 10%;
+	height: 10%;
+	padding: 100px;
+	z-index: 4;
+	font-size: 3em;
+}
+
+body {
+	padding-top: 10vh;
+	background-attachment: fixed;
+	background-image: url("cloud2.png");
+	font-size: 1.5em;
+}
+
+h1, p, label {
+    color: #eeeeee;
+    text-shadow: .1vh .1vh #00ffff;
+} 
+
+/* hide radio buttons, custom labels are used instead */
+input[type="radio"] {
+    position: absolute;
+    left: -300px;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+.project {
+	display: grid;
+	grid-template-columns: 45vw 1fr;
+}
+
+.project .project-description {
+	background-color: #111111;
+	text-align: center;
+	grid-column: 1/2;
+	max-height: 50vh;
+	margin-left: 5vw;
+	border: 30px solid transparent;
+	z-index: 2;
+}
+
+.project .project-showcase {
+	padding: 10px;
+	background-color: #111111;
+	grid-column: 2/3;
+	margin: 0px 5% 50vh 20%;
+	max-height: 90vh;
+}
+
+.project .project-showcase img,
+.project .project-showcase video {
+	width: 30%;
+	display: inline;
+}
+.project:last-child {
+	margin-bottom: 25vh;
+}
