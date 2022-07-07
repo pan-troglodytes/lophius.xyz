@@ -1,0 +1,278 @@
+
+/* hide radio buttons, custom labels are used instead */
+input[type="radio"] {
+    position: absolute;
+    left: -300px;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+body {
+	color: #ffffff;
+	background-color: #000000;
+}
+
+
+
+
+/* gallery  */
+
+
+#gallery {
+	
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.artwork {
+    margin: 50px;
+    border: 5px solid #ff00ff;
+    width: 400px;
+    text-align: center;
+	border: 5px solid #00ffff;
+	background: #111111;      }
+
+
+.artwork img {
+    width: 100%;
+    
+}
+
+/* hide these in unfocused state */
+.gallery-controls,
+.artwork-controls label,
+.artwork-description,
+.artwork:target .artwork-title a 
+{
+    display: none;
+}
+
+
+/* focused artwork */
+.artwork:target {
+    margin: 0px;
+    width: 0px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #111111;
+    width: 90%;
+    height: 90%;
+    overflow: auto;
+	display: flex;
+	flex-direction: column;
+}
+.artwork:target .artwork-title {
+	order: 1;
+}
+
+.artwork:target .gallery-controls {
+	order: 3;
+}
+
+
+.artwork:target .artwork-description {
+	order: 4;
+}
+ 
+/* scales the image in proportion, to a good size */
+.artwork:target div img { 
+    width: unset;
+    height: 100%;
+    max-width: 100%;
+}
+
+
+/* this are otherwised hidden when unfocused */
+.artwork-controls label {
+	height: 50px;
+	width: 100%;
+    background: #444444;
+    box-shadow: 0px 0px 0px 2px #ff00ff;
+	grid-row: 2/3;
+}
+
+/* 
+ * the artwork uses flexbox, but the artwork-controls in the artwork use grid
+ *
+ * This is because the images must be directly after the rotational controls in a 
+ * logical sense, but to put the images before visually, grid is used
+ *
+ * each artwork control has its own grid column, which is the easiest way to sort them
+ * (flex box would be easier, but as mentioned above, it cant be used)
+ * */
+.artwork:target .artwork-controls {
+	order: 2;
+	display: grid;
+	grid-template-rows: 5fr 1fr;
+	grid-template-columns: 1fr 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 1fr;
+}
+.artwork:target .artwork-images {
+	height: 600px;
+	grid-row: 1/2;
+	grid-column: 1/15;
+}
+.artwork-controls :nth-child(1) {
+	grid-column: 2/3;
+}
+.artwork-controls :nth-child(2) {
+	grid-column: 3/4;
+}
+.artwork-controls :nth-child(3) {
+	grid-column: 4/5;
+}
+.artwork-controls :nth-child(4) {
+	grid-column: 5/6;
+}
+.artwork-controls :nth-child(5) {
+	grid-column: 6/7;
+}
+.artwork-controls :nth-child(6) {
+	grid-column: 7/8;
+}
+.artwork-controls :nth-child(7) {
+	grid-column: 8/9;
+}
+.artwork-controls :nth-child(8) {
+	grid-column: 9/10;
+}
+.artwork-controls :nth-child(9) {
+	grid-column: 10/11;
+}
+.artwork-controls :nth-child(10) {
+	grid-column: 11/12;
+}
+.artwork-controls :nth-child(11) {
+	grid-column: 12/13;
+}
+.artwork-controls :nth-child(12) {
+	grid-column: 13/14;
+}
+
+/* show these when artwork is focused */
+.artwork:target .gallery-controls,
+.artwork:target .artwork-description,
+.artwork:target .artwork-controls label 
+{
+    display:unset;
+}
+
+.artwork:target .gallery-controls a {
+	display: inline-block;
+}
+
+
+/* display image */
+
+/* hide all images */
+.arr
+{
+    display: none;
+}
+
+/* 
+ * if a artwork controller is hovered or checked, show its
+ * corresponding artowrk
+ */
+.c1:checked  ~ div div .i1,  .l1:hover  ~ div .i1,
+.c2:checked  ~ div div .i2,  .l2:hover  ~ div .i2,
+.c3:checked  ~ div div .i3,  .l3:hover  ~ div .i3,
+.c4:checked  ~ div div .i4,  .l4:hover  ~ div .i4,
+.c5:checked  ~ div div .i5,  .l5:hover  ~ div .i5,
+.c6:checked  ~ div div .i6,  .l6:hover  ~ div .i6,
+.c7:checked  ~ div div .i7,  .l7:hover  ~ div .i7,
+.c8:checked  ~ div div .i8,  .l8:hover  ~ div .i8,
+.c9:checked  ~ div div .i9,  .l9:hover  ~ div .i9,
+.c10:checked ~ div div .i10, .l10:hover ~ div .i10,
+.c11:checked ~ div div .i11, .l11:hover ~ div .i11,
+.c12:checked ~ div div .i12, .l12:hover ~ div .i12
+{
+    display: unset;
+}
+
+/*
+ * when an artwork is hovered, hide all the others 
+ * (the one thats currently checked) 
+ * */
+.l1:hover ~ div  img:not(.i1),
+.l2:hover ~ div  img:not(.i2),
+.l3:hover ~ div  img:not(.i3),
+.l4:hover ~ div  img:not(.i4),
+.l5:hover ~ div  img:not(.i5),
+.l6:hover ~ div  img:not(.i6),
+.l7:hover ~ div  img:not(.i7),
+.l8:hover ~ div  img:not(.i8),
+.l9:hover ~ div  img:not(.i9),
+.l10:hover ~ div img:not(.i10),
+.l11:hover ~ div img:not(.i11),
+.l12:hover ~ div img:not(.i12)
+{
+    display: none;
+}
+
+
+
+/* color of checked label */
+.c1:checked ~ div .l1,
+.c2:checked ~ div .l2,
+.c3:checked ~ div .l3,
+.c4:checked ~ div .l4,
+.c5:checked ~ div .l5,
+.c6:checked ~ div .l6,
+.c7:checked ~ div .l7,
+.c8:checked ~ div .l8,
+.c9:checked ~ div .l9,
+.c10:checked ~ div .l10,
+.c11:checked ~ div .l11,
+.c12:checked ~ div .l12 {
+    background: #00ffff;
+}
+
+/* color of focused label */
+.c1:focus ~ div .l1,
+.c2:focus ~ div .l2,
+.c3:focus ~ div .l3,
+.c4:focus ~ div .l4,
+.c5:focus ~ div .l5,
+.c6:focus ~ div .l6,
+.c7:focus ~ div .l7,
+.c8:focus ~ div .l8,
+.c9:focus ~ div .l9,
+.c10:focus ~ div .l10,
+.c11:focus ~ div .l11,
+.c12:focus ~ div .l12 {
+    z-index: 1;
+    box-shadow: 0px 0px 0px 5px #ffffff;
+
+}
+
+/* color of hovered label */
+.artwork-controls label:hover {
+    background: #00aaaa;
+}
+
+
+
+
+/*
+ * when the user closes an art peice, they should focus an invisible div that is fixed
+ * to the top of the page, to keep the scroll position, otherwise the page automatically 
+ * scrolls up
+ */
+#keep-scroll {
+    position: fixed;
+}
+
+
+
+
+
+
+
+
+
+
