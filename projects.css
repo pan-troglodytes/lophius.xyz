@@ -71,31 +71,37 @@ input[type="radio"] {
 .project {
 	display: grid;
 	grid-template-columns: 45vw 1fr;
+	margin-bottom: 25vh;
+
 }
 
-.project .project-description {
+.project-description {
 	background-color: #111111;
 	text-align: center;
 	grid-column: 1/2;
+	grid-row: 1/2;
 	max-height: 50vh;
 	margin-left: 5vw;
 	border: 30px solid transparent;
 	z-index: 2;
+	margin-bottom: 25vh;
 }
 
-.project .project-showcase {
+.project-showcase {
 	padding: 10px;
 	background-color: #111111;
 	grid-column: 2/3;
+	grid-row: 1/2;
 	margin: 0px 5% 50vh 20%;
 	max-height: 90vh;
+	margin-bottom: 25vh;
 }
 
-.project .project-showcase img,
-.project .project-showcase video {
+.project-showcase img,
+.project-showcase video {
 	width: 30%;
 	display: inline;
 }
 .project:last-child {
-	margin-bottom: 25vh;
+	margin-bottom: 50vh;
 }
