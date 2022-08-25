@@ -9,8 +9,7 @@ input[type="radio"] {
 }
 
 body {
-	color: #ffffff;
-	background-color: #000000;
+	background-color: #4f0b1e;
 }
 
 
@@ -169,7 +168,7 @@ body {
 /* display image */
 
 /* hide all images */
-.arr
+.art
 {
     display: none;
 }

@@ -1,0 +1,25 @@
+.list-of-things {
+	padding-left: 10vw;
+	padding-right: 10vw;
+	margin-top: 100px;
+}
+.home {
+	margin: 30px;
+	font-size: 2em;
+}
+
+h2 {
+	text-decoration: underline;
+	padding-top: 70px;
+}
+h3 {
+	padding-top: 40px;
+}
+p, ul {
+	padding-top: 30px;
+	padding-left: 70px;
+}
+
+li {
+	list-style-type: square;
+}

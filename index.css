@@ -42,11 +42,13 @@
 	background-color: #343434;
 	background-image: url("background-stars.png");
 }
+body {
+	color: #000000;
+}
 
 article {
 	background: #dddddd;
 	border: 10px solid #000000;
-	border-radius: 15px;
 	padding: 50px;
 }
 
