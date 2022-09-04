@@ -68,6 +68,16 @@ a .rainbow span{
 	transform: scale(2);
 }
 
+.web-button {
+	width: 88px;
+	transition: .3s;
+	transform: scale(1);
+}
+.web-button:hover {
+	transition: .3s;
+	transform: scale(1.1);
+}
+
 .a1 {
 	animation-delay: .0s;
 }
