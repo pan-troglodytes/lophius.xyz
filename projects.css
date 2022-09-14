@@ -46,6 +46,10 @@
 	font-size: 3em;
 }
 
+#home h1 {
+	color: #222222;
+}
+
 body {
 	padding-top: 10vh;
 	background-attachment: fixed;

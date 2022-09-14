@@ -9,35 +9,46 @@ input[type="radio"] {
 }
 
 body {
-	background-color: #4f0b1e;
+	background-image: url("flower.png");
 }
 
+a {
+	color: #ab2652;
+}
 
 
 
 /* gallery  */
 
+#gallery-intro {
+	text-shadow: -1px 1px 0 #9c284e,
+	1px 1px 0 #9c284e,
+	1px -1px 0 #9c284e,
+	-1px -1px 0 #9c284e,
+	-2px 2px 0 #9c284e,
+	2px 2px 0 #9c284e,
+	2px -2px 0 #9c284e,
+	-2px -2px 0 #9c284e;
+}
 
 #gallery {
-	
+	color: #222222;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
 }
 
 .artwork {
     margin: 50px;
-    border: 5px solid #ff00ff;
-    width: 400px;
     text-align: center;
-	border: 5px solid #00ffff;
-	background: #111111;      }
+	border: 66px solid #f7e0ac;
+	border-image: url(gallery-border.png) 66 round;
+	background: #f7e0ac;
+}
 
 
 .artwork img {
-    width: 100%;
-    
+    height: 10vw;
 }
 
 /* hide these in unfocused state */
@@ -52,19 +63,15 @@ body {
 
 /* focused artwork */
 .artwork:target {
-    margin: 0px;
-    width: 0px;
     position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background: #111111;
-    width: 90%;
-    height: 90%;
-    overflow: auto;
 	display: flex;
 	flex-direction: column;
+	width: 70%;
+	height: 60%;
+	overflow: auto;
+	margin: 0 auto;
 }
+
 .artwork:target .artwork-title {
 	order: 1;
 }
@@ -80,18 +87,19 @@ body {
  
 /* scales the image in proportion, to a good size */
 .artwork:target div img { 
-    width: unset;
+    height: 20vw;
+	/*
     height: 100%;
     max-width: 100%;
+	*/
 }
 
 
 /* this are otherwised hidden when unfocused */
 .artwork-controls label {
-	height: 50px;
-	width: 100%;
-    background: #444444;
-    box-shadow: 0px 0px 0px 2px #ff00ff;
+	height: 30px;
+    background: #ab2652;
+    box-shadow: 0px 0px 0px 4px #efc56c;
 	grid-row: 2/3;
 }
 
@@ -108,10 +116,9 @@ body {
 	order: 2;
 	display: grid;
 	grid-template-rows: 5fr 1fr;
-	grid-template-columns: 1fr 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 1fr;
+	grid-template-columns: 1fr 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 1fr;
 }
 .artwork:target .artwork-images {
-	height: 600px;
 	grid-row: 1/2;
 	grid-column: 1/15;
 }
@@ -228,7 +235,7 @@ body {
 .c10:checked ~ div .l10,
 .c11:checked ~ div .l11,
 .c12:checked ~ div .l12 {
-    background: #00ffff;
+    background: #fff18d;
 }
 
 /* color of focused label */
@@ -245,13 +252,13 @@ body {
 .c11:focus ~ div .l11,
 .c12:focus ~ div .l12 {
     z-index: 1;
-    box-shadow: 0px 0px 0px 5px #ffffff;
+    box-shadow: 0px 0px 0px 5px #d8ab4e;
 
 }
 
 /* color of hovered label */
 .artwork-controls label:hover {
-    background: #00aaaa;
+    background: #6d0829;
 }
 
 

@@ -47,6 +47,10 @@ ol {
 	visibility: hidden;
 }
 
+.home {
+	margin: 30px;
+}
+
 a .rainbow span{
 	text-decoration: underline;
 }
