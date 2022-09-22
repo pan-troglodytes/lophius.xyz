@@ -32,7 +32,7 @@
 
 #narrator {
 	bottom: 0px;
-	left: 0px;
+	left: -150px;
 	height: 30%;
 	z-index:  4;
 }
@@ -53,7 +53,7 @@
 body {
 	padding-top: 10vh;
 	background-attachment: fixed;
-	background-image: url("cloud2.png");
+	background-image: url("cloud2-1.png");
 	font-size: 1.5em;
 }
 
@@ -84,7 +84,6 @@ input[type="radio"] {
 	text-align: center;
 	grid-column: 1/2;
 	grid-row: 1/2;
-	max-height: 50vh;
 	margin-left: 5vw;
 	border: 30px solid transparent;
 	z-index: 2;

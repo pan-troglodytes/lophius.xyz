@@ -1,0 +1,13 @@
+body {
+	background-color: #ffbd40;
+	padding: 200px;
+}
+
+article {
+	margin: 40px;
+	padding: 40px;
+	background-color: #ffa803;
+	box-shadow: 
+		3px 3px 0px 6px #40ffcd,
+		6px 6px 0px 9px #40d5ff;
+}

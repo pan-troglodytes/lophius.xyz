@@ -1,63 +1,85 @@
-#welcome-screen {
-	background-image: url("hearts.gif");
-	height: 100vh;
-	margin: 0px;
+#solar-system {
+	display: grid;
+	grid-template-rows: 50px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
-#welcome-message {
-	background: #dddddd;
-	border: 10px solid #000000;
-	border-radius: 15px;
-	/* animation */
-	width: 80%;
-	animation-name: float;
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
-	animation-duration: 2s;
-	animation-timing-function: ease-in-out;
-	/* centre */
-	position: absolute;
+#lophius {
+	grid-column-start: 4;
+	grid-column-end: 7;
+	grid-row-start: 4;
+	grid-row-end: 7;
+}
+#gallery {
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 3;
+	grid-row-end: 4;
+}
+#projects {
+	grid-column-start: 5;
+	grid-column-end: 6;
+	grid-row-start: 2;
+	grid-row-end: 2;
+}
+#links {
+	grid-column-start: 7;
+	grid-column-end: 8;
+	grid-row-start: 4;
+	grid-row-end: 5;
+}
+#writings {
+	grid-column-start: 6;
+	grid-column-end: 7;
+	grid-row-start: 7;
+	grid-row-end: 8;
+}
+#about {
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 6;
+	grid-row-end: 7;
+}
+.star, .planet {
+	position: relative;
 	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-	left: 0;
-	right: 0;
+	transform: scale(1);
+	transition: .3s;
+}
+.planet:hover {
+	transform: scale(1.2);
+	transition: .3s;
+}
+.planet-text {
+  position: absolute;
 }
 
-#hello {
-	font-size: 3em;
-}
-
-#welcome-main-border {
+.star-text {
 	position: absolute;
-	top:calc(100vh - 70px); /* height of screen resolution - hight of image*/
-	left: 0;
-	width: 100%;
-	padding:0;
-	margin:0;
-	background-image: url("border.gif");
+	top: 33%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #333333;
+	font-size: 4.5em;
+	font-style: bold;
+	color: #ffffff;
+	text-shadow: 2px 2px 0 #00ffff,
+		4px 4px 0 #ff00ff;
 }
 
-#main {
-	padding: 50vh 5vw;
-	background-color: #343434;
-	background-image: url("background-stars.png");
-}
 body {
-	color: #000000;
+	background-color: #343434;
+	background-image: url("stars.png");
 }
 
-article {
-	background: #dddddd;
-	border: 10px solid #000000;
-	padding: 50px;
+img {
+	justify-self: center;
 }
 
-article + article {
-	margin-top: 100px;
+* {
+	cursor: url("saucer.png"), auto;
 }
-
 @keyframes float {
-	0%   {margin: 150px auto;}
-	100%   {margin: 200px auto;}
+	0% {transform: translate(0px, 10px)};
+	100% {transform: translate(0px, 0px)};
 }
 

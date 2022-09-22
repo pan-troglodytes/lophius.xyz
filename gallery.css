@@ -7,6 +7,11 @@ input[type="radio"] {
     width: 0;
     height: 0;
 }
+.artwork:not(:target) input[type="radio"]:focus ~ div div img{
+	animation-name: rainbow-shadow;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
 
 body {
 	background-image: url("flower.png");
@@ -70,6 +75,7 @@ a {
 	height: 60%;
 	overflow: auto;
 	margin: 0 auto;
+	animation-name: unset;
 }
 
 .artwork:target .artwork-title {

@@ -1,3 +1,7 @@
+body {
+	background-image: url("background-writings.png");
+	background-attachment: fixed;
+}
 .list-of-things {
 	padding-left: 10vw;
 	padding-right: 10vw;

@@ -1,0 +1,7 @@
+body {
+	background-image: url("links-background.png");
+	color: #333333;
+}
+article + article {
+	margin-top: 100px;
+}
