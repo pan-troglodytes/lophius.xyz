@@ -14,7 +14,7 @@ input[type="radio"] {
 }
 
 body {
-	background-image: url("flower.png");
+	background-image: url("background-gallery.png");
 }
 
 a {
@@ -94,10 +94,6 @@ a {
 /* scales the image in proportion, to a good size */
 .artwork:target div img { 
     height: 20vw;
-	/*
-    height: 100%;
-    max-width: 100%;
-	*/
 }
 
 
@@ -277,6 +273,13 @@ a {
  */
 #keep-scroll {
     position: fixed;
+}
+
+* {
+	cursor: url("cursor-gallery-default.png"), auto;
+}
+a, a span, label{
+	cursor: url("cursor-gallery-pointer.png") 17 0, auto ;
 }
 
 

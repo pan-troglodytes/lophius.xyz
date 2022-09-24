@@ -2,7 +2,7 @@ body {
 	background-image: url("background-writings.png");
 	background-attachment: fixed;
 }
-.list-of-things {
+article {
 	padding-left: 10vw;
 	padding-right: 10vw;
 	margin-top: 100px;
@@ -24,9 +24,9 @@ li {
 	list-style-type: square;
 }
 
-#do {
+#positive {
 	color: #00ff00;
 }
-#dont {
+#negative {
 	color: #ff0000;
 }

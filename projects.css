@@ -50,10 +50,15 @@
 	color: #222222;
 }
 
+
+#tab-jump-to-start a:focus {
+	z-index: 999;
+}
+
 body {
 	padding-top: 10vh;
 	background-attachment: fixed;
-	background-image: url("cloud2-1.png");
+	background-image: url("background-projects.png");
 	font-size: 1.5em;
 }
 
@@ -108,3 +113,11 @@ input[type="radio"] {
 .project:last-child {
 	margin-bottom: 50vh;
 }
+
+* {
+	cursor: url("cursor-projects-default.png"), auto;
+}
+a, a span, label{
+	cursor: url("cursor-projects-pointer.png") 8 0, auto ;
+}
+

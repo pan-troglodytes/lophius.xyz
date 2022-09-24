@@ -1,8 +1,11 @@
 #solar-system {
 	display: grid;
-	grid-template-rows: 50px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 50px 10vh 10vh 10vh 10vh 10vh 10vh 1vh 1vh;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	width: 100vw;
+	height: 100vh;
 }
+
 #lophius {
 	grid-column-start: 4;
 	grid-column-end: 7;
@@ -22,10 +25,10 @@
 	grid-row-end: 2;
 }
 #links {
-	grid-column-start: 7;
-	grid-column-end: 8;
-	grid-row-start: 4;
-	grid-row-end: 5;
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 6;
+	grid-row-end: 7;
 }
 #writings {
 	grid-column-start: 6;
@@ -34,17 +37,42 @@
 	grid-row-end: 8;
 }
 #about {
-	grid-column-start: 3;
-	grid-column-end: 4;
-	grid-row-start: 6;
-	grid-row-end: 7;
+	grid-column-start: 7;
+	grid-column-end: 8;
+	grid-row-start: 4;
+	grid-row-end: 5;
 }
+
 .star, .planet {
-	position: relative;
 	text-align: center;
 	transform: scale(1);
 	transition: .3s;
 }
+#help {
+	position:absolute;
+	left: 10vw;
+	bottom: 5vh;
+}
+#help:hover + #help-sign, #help-sign:hover {
+	display: unset;
+}
+#help-sign {
+	display: none;
+	position: absolute;
+	padding: 50px;
+	bottom: 22.5vh;
+	background-color: #b59176;
+	width: 40vw;
+	border-left: 3px solid #795c46;
+	border-bottom: 3px solid #795c46;
+	border-right: 3px solid #d4ab8c;
+	border-top: 3px solid #d4ab8c;
+}
+#help-sign p {
+	font-size: 2em;
+	font-style: bold;
+}
+
 .planet:hover {
 	transform: scale(1.2);
 	transition: .3s;
@@ -55,7 +83,7 @@
 
 .star-text {
 	position: absolute;
-	top: 33%;
+	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	color: #333333;
@@ -67,8 +95,7 @@
 }
 
 body {
-	background-color: #343434;
-	background-image: url("stars.png");
+	background-image: url("background-index.png");
 }
 
 img {
