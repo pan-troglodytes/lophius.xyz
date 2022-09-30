@@ -5,3 +5,12 @@ body {
 article + article {
 	margin-top: 100px;
 }
+#yesterwebring {
+	color: #eeeeee;
+	background-image: url(gridnew.gif);
+	max-width: 500px;
+	outline: 2px solid limegreen;
+	outline-offset: -4px;
+	box-shadow: 0 0 0 2px limegreen;
+	padding: 10px;
+}
