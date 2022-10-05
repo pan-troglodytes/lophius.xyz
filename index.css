@@ -48,6 +48,12 @@
 	grid-row-start: 8;
 	grid-row-end: 9;
 }
+#guestbook {
+	grid-column-start: 4;
+	grid-column-end: 5;
+	grid-row-start: 8;
+	grid-row-end: 9;
+}
 
 .star, .planet {
 	text-align: center;
