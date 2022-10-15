@@ -165,6 +165,7 @@ input:focus:not([type=submit]), textarea:focus {
 }
 body {
 	background-image: url("background-guestbook.png");
+	background-attachment: fixed;
 }
 .message {
 	min-height: 100px;
@@ -190,7 +191,7 @@ pre {
 #email-info {
 	display: none;
 }
-#guestbook-intro p, #email-info p {
+#guestbook-intro, #email-info  p{
 	background: #e9f7f5;
 	box-shadow: 0px 0px 0px 12px #e9f7f5;
 }

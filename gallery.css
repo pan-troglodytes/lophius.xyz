@@ -92,7 +92,7 @@ a {
 }
  
 /* scales the image in proportion, to a good size */
-.artwork:target div img { 
+.artwork:target section img { 
     height: 20vw;
 }
 
@@ -186,18 +186,18 @@ a {
  * if a artwork controller is hovered or checked, show its
  * corresponding artowrk
  */
-.c1:checked  ~ div div .i1,  .l1:hover  ~ div .i1,
-.c2:checked  ~ div div .i2,  .l2:hover  ~ div .i2,
-.c3:checked  ~ div div .i3,  .l3:hover  ~ div .i3,
-.c4:checked  ~ div div .i4,  .l4:hover  ~ div .i4,
-.c5:checked  ~ div div .i5,  .l5:hover  ~ div .i5,
-.c6:checked  ~ div div .i6,  .l6:hover  ~ div .i6,
-.c7:checked  ~ div div .i7,  .l7:hover  ~ div .i7,
-.c8:checked  ~ div div .i8,  .l8:hover  ~ div .i8,
-.c9:checked  ~ div div .i9,  .l9:hover  ~ div .i9,
-.c10:checked ~ div div .i10, .l10:hover ~ div .i10,
-.c11:checked ~ div div .i11, .l11:hover ~ div .i11,
-.c12:checked ~ div div .i12, .l12:hover ~ div .i12
+.c1:checked  ~ section section .i1,  .l1:hover  ~ section .i1,
+.c2:checked  ~ section section .i2,  .l2:hover  ~ section .i2,
+.c3:checked  ~ section section .i3,  .l3:hover  ~ section .i3,
+.c4:checked  ~ section section .i4,  .l4:hover  ~ section .i4,
+.c5:checked  ~ section section .i5,  .l5:hover  ~ section .i5,
+.c6:checked  ~ section section .i6,  .l6:hover  ~ section .i6,
+.c7:checked  ~ section section .i7,  .l7:hover  ~ section .i7,
+.c8:checked  ~ section section .i8,  .l8:hover  ~ section .i8,
+.c9:checked  ~ section section .i9,  .l9:hover  ~ section .i9,
+.c10:checked ~ section section .i10, .l10:hover ~ section .i10,
+.c11:checked ~ section section .i11, .l11:hover ~ section .i11,
+.c12:checked ~ section section .i12, .l12:hover ~ section .i12
 {
     display: unset;
 }
@@ -206,18 +206,18 @@ a {
  * when an artwork is hovered, hide all the others 
  * (the one thats currently checked) 
  * */
-.l1:hover ~ div  img:not(.i1),
-.l2:hover ~ div  img:not(.i2),
-.l3:hover ~ div  img:not(.i3),
-.l4:hover ~ div  img:not(.i4),
-.l5:hover ~ div  img:not(.i5),
-.l6:hover ~ div  img:not(.i6),
-.l7:hover ~ div  img:not(.i7),
-.l8:hover ~ div  img:not(.i8),
-.l9:hover ~ div  img:not(.i9),
-.l10:hover ~ div img:not(.i10),
-.l11:hover ~ div img:not(.i11),
-.l12:hover ~ div img:not(.i12)
+.l1:hover ~ section  img:not(.i1),
+.l2:hover ~ section  img:not(.i2),
+.l3:hover ~ section  img:not(.i3),
+.l4:hover ~ section  img:not(.i4),
+.l5:hover ~ section  img:not(.i5),
+.l6:hover ~ section  img:not(.i6),
+.l7:hover ~ section  img:not(.i7),
+.l8:hover ~ section  img:not(.i8),
+.l9:hover ~ section  img:not(.i9),
+.l10:hover ~ section img:not(.i10),
+.l11:hover ~ section img:not(.i11),
+.l12:hover ~ section img:not(.i12)
 {
     display: none;
 }
@@ -225,34 +225,34 @@ a {
 
 
 /* color of checked label */
-.c1:checked ~ div .l1,
-.c2:checked ~ div .l2,
-.c3:checked ~ div .l3,
-.c4:checked ~ div .l4,
-.c5:checked ~ div .l5,
-.c6:checked ~ div .l6,
-.c7:checked ~ div .l7,
-.c8:checked ~ div .l8,
-.c9:checked ~ div .l9,
-.c10:checked ~ div .l10,
-.c11:checked ~ div .l11,
-.c12:checked ~ div .l12 {
+.c1:checked ~ section .l1,
+.c2:checked ~ section .l2,
+.c3:checked ~ section .l3,
+.c4:checked ~ section .l4,
+.c5:checked ~ section .l5,
+.c6:checked ~ section .l6,
+.c7:checked ~ section .l7,
+.c8:checked ~ section .l8,
+.c9:checked ~ section .l9,
+.c10:checked ~ section .l10,
+.c11:checked ~ section .l11,
+.c12:checked ~ section .l12 {
     background: #fff18d;
 }
 
 /* color of focused label */
-.c1:focus ~ div .l1,
-.c2:focus ~ div .l2,
-.c3:focus ~ div .l3,
-.c4:focus ~ div .l4,
-.c5:focus ~ div .l5,
-.c6:focus ~ div .l6,
-.c7:focus ~ div .l7,
-.c8:focus ~ div .l8,
-.c9:focus ~ div .l9,
-.c10:focus ~ div .l10,
-.c11:focus ~ div .l11,
-.c12:focus ~ div .l12 {
+.c1:focus ~ section .l1,
+.c2:focus ~ section .l2,
+.c3:focus ~ section .l3,
+.c4:focus ~ section .l4,
+.c5:focus ~ section .l5,
+.c6:focus ~ section .l6,
+.c7:focus ~ section .l7,
+.c8:focus ~ section .l8,
+.c9:focus ~ section .l9,
+.c10:focus ~ section .l10,
+.c11:focus ~ section .l11,
+.c12:focus ~ section .l12 {
     z-index: 1;
     box-shadow: 0px 0px 0px 5px #d8ab4e;
 

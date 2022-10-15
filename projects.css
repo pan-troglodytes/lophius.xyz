@@ -51,9 +51,6 @@
 }
 
 
-#tab-jump-to-start a:focus {
-	z-index: 999;
-}
 
 body {
 	padding-top: 10vh;
