@@ -45,7 +45,7 @@ h3 {
 	font-size: 50px;
 }
 
-p, li, a {
+p, li, a, label {
 	font-size: 30px;
 }
 
@@ -53,7 +53,7 @@ p + p {
 	margin-top: 20px;
 }
 
-a {
+a, label{
 	color: #ff00ff;
 }
 

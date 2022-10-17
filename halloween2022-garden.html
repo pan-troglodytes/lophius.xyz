@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>thing</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="general.css">
+<link rel="stylesheet" href="treasure-hunt.css">
+<link rel="stylesheet" href="halloween2022-garden.css">
+<body>
+<section class="treasure-hunt">
+	<input type="checkbox" class="treasure-input" name="treasure1" id="t1">
+	<input type="checkbox" class="treasure-input" name="treasure1" id="t2">
+	<input type="checkbox" class="treasure-input" name="treasure1" id="t3">
+	<img src="night.png" id="background">
+	<img src="spooky-garden.png" id="overlay">
+	<img src="spooky-zombiehand.png" id="zombiehand" class="troll">
+	<img src="spooky-pumpkinface.png" id="pumpkinface" class="troll">
+	<img src="spooky-maneatereye.png" id="maneatereye" class="troll">
+	<img src="spooky-figure.png" id="figure" class="troll">
+	<img src="spooky-stars.png" id="stars" class="troll">
+	<section class="hunting-ground" class="troll"> 
+		<label for="t1" class="treasure"><img src="spooky-candy.png"></label>
+		<label for="t2" class="treasure"><img src="spooky-candy.png"></label>
+		<label for="t3" class="treasure"><img src="spooky-candy.png"></label>
+	</section>
+	<section class="treasure-box">
+		<img class="treasure-preview" src="spooky-candy.png">
+		<img class="treasure-preview" src="spooky-candy.png">
+		<img class="treasure-preview" src="spooky-candy.png">
+		<p>treats found</p>
+	</section>
+	<div class="wrapper">
+	<div class="movable">
+		<div class="handle"></div>
+		<textarea rows="5" cols="1" class="movable-textarea" readonly></textarea>
+		<div id="escape1" class="escape"></div>
+		<div id="escape2" class="escape"></div>
+		<div id="light"></div>
+	</div>
+	</div>
+	<main>
+		<section class="speech-bubble">
+			<input type="radio" name="speech1" id="p1" checked>
+			<section class="speech-bubble-content">
+				<p>
+					its so spoooky and dark here in the garden
+				</p>
+				<br>
+				<label for="p2">next</label>
+			</section>
+			<input type="radio" name="speech1" id="p2">
+			<section class="speech-bubble-content">
+				<p>
+					its so worth being here tho, this place is loaded with treats!
+				</p>
+				<br>
+				<label for="p1">prev</label>
+				<label for="p3">next</label>
+			</section>
+			<input type="radio" name="speech1" id="p3">
+			<section class="speech-bubble-content">
+				<p>
+					first we have to deal with all the darkness
+				</p>
+				<br>
+				<label for="p2">prev</label>
+				<label for="p4">next</label>
+			</section>
+			<input type="radio" name="speech1" id="p4">
+			<section class="speech-bubble-content">
+				<p>
+					grab the flashlight on the top left of the screen to brighten up parts of the garden
+				</p>
+				<br>
+				<label for="p3">prev</label>
+				<label for="p5">next</label>
+			</section>
+			<input type="radio" name="speech1" id="p5">
+			<section class="speech-bubble-content">
+				<p>
+				<b>to click <img class="inline-icon" src="torch.png"> flashlight, aim 
+				for the centre of the handle, drag it when you have a grip. when you find a treat you can let go of the
+				flashlight to click the treats, all 3 of which look like this: <img class="inline-icon" src="spooky-candy.png"> </b>
+				</p>
+				<br>
+				<label for="p4">prev</label>
+				<br>
+				<label for="p6" class="progress">show treats</label>
+			</section>
+			<input type="radio" name="speech1" id="p6">
+			<section class="speech-bubble-content">
+				<p>
+					congrats! i think id rather stick with brains however
+					<br>
+					aslong as we're both happy!
+				</p>
+				<label for="p5">prev</label>
+				<br>
+				<br>
+				<a href="halloween2022-treats.html"> leave garden</a>
+			</section>
+			<div class="speech-triangle"></div>
+			<div class="characters">
+				<img src="cadaver-manic-crop.png" id="manic">
+				<img src="cadaver-cough-crop.png" id="cough">
+				<img src="cadaver-talk1-crop.png" id="talk1">
+				<img src="cadaver-talk2-crop.png" id="talk2">
+				<img src="cadaver-plot-crop.png" id="plot">
+				<img src="cadaver-nom-crop.png" id="nom">
+			</div>
+		</section>
+	</main>
+</section>
+</body>
+</html>

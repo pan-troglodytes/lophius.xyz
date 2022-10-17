@@ -1,0 +1,166 @@
+textarea {
+	animation-name: unset !important;
+}
+#background {
+	z-index: 2;
+}
+#overlay {
+	position: absolute;
+	z-index: 4;
+}
+.wrapper {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+main {
+
+	top: 10px;
+	left: 1500px;
+
+}
+.movable-textarea {
+    position: relative;
+    margin: 20px 0 0 20px;
+	background-color: transparent;
+    z-index: 1;
+	color: transparent;
+	max-height: 96vh;
+	max-width: 89vw;
+}
+.movable {
+    position: relative;
+    display: inline-block;
+}
+.handle {
+	padding: 32px;
+	background-image: url(torch.png);
+    position: absolute;
+    bottom: -20px;
+    right: -32px;
+    z-index: 5;
+}
+.escape {
+	padding: 16px;
+    position: absolute;
+    z-index: 1;
+}
+
+#escape1 {
+    right: 0px;
+    bottom: 12px;
+}
+#escape2 {
+    right: 12px;
+    bottom: 0px;
+}
+#light {
+	border-radius: 100%;
+	position: absolute;
+	padding: 228px;
+	background-color: #fff2d0;
+    right: -286px;
+    bottom: 64px;
+	z-index: 3;
+}
+.handle:hover ~ .movable-textarea {
+	z-index: 6;
+}
+.movable-textarea:hover {
+	z-index: 6;
+}
+.movable-textarea:hover ~ .escape {
+	z-index: 7;
+}
+
+.escape:hover {
+	z-index: 7;
+}
+
+
+.troll {
+	position: absolute;
+	animation-name: popout;
+	animation-iteration-count: infinite;
+	z-index: 5;
+}
+#zombiehand {
+	top: 650px;
+	left: 1250px;
+	animation-duration: 15s;
+}
+#pumpkinface {
+	top: 540px;
+	left: 650px;
+	animation-name: popout-rare;
+	animation-duration: 5s;
+}
+#maneatereye {
+	top: 540px;
+	left: 200px;
+	animation-duration: 5s;
+}
+#figure {
+	top: 340px;
+	left: 727px;
+	animation-duration: 30s;
+}
+#stars {
+	top: 100px;
+	left: 727px;
+	animation-duration: 10s;
+}
+
+.speech-bubble {
+	min-width: 350px;
+	max-width: 350px;
+}
+input[type=radio]:checked + .speech-bubble-content {
+	min-height: 300px;
+	max-height: 300px;
+}
+.treasure-box {
+	left: 1200px;
+}
+.treasure {
+	z-index: 5;
+}
+.treasure:nth-child(1) {
+	position: absolute;
+	top: 750px;
+	left: 1323px;
+}
+.treasure:nth-child(2) {
+	position: absolute;
+	top: 355px;
+	left: 1200px;
+}
+.treasure:nth-child(3) {
+	position: absolute;
+	top: 925px;
+	left: 500px;
+}
+#p1:checked ~ .characters #cough, 
+#p2:checked ~ .characters #talk1,
+#p3:checked ~ .characters #plot,
+#p4:checked ~ .characters #plot,
+#p5:checked ~ .characters #talk2,
+#p6:checked ~ .characters #nom
+{
+	display: unset;
+}
+#p4:checked ~ .characters #plot {
+	transform: scaleX(-1);
+}
+@keyframes popout {
+	0% {opacity: 0%;}
+	70% {opacity: 0%;}
+	90% {opacity: 100%;}
+	100% {opacity: 0%;}
+}
+@keyframes popout-rare {
+	0% {opacity: 0%;}
+	98% {opacity: 0%;}
+	99% {opacity: 100%;}
+	100% {opacity: 0%;}
+}

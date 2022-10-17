@@ -1,0 +1,140 @@
+input[type=radio], input[type=checkbox] {
+    position: absolute;
+    left: -3000px;
+}
+.speech-bubble {
+	word-wrap:break-word;
+	display: block;
+	padding: 30px;
+	color: black;
+	min-width: 300px;
+	max-width: 300px;
+	text-align: center;
+	z-index: 4;
+}
+.speech-bubble-content {
+	display: none;
+}
+.speech-bubble-content {
+	background-color: lightcyan;
+
+}
+input[type=radio]:checked + .speech-bubble-content {
+	display: block;
+	min-height: 250px;
+	max-height: 250px;
+	padding: 15px;
+}
+
+.hunting-ground {
+	width: 100vw;
+	height: 100vh;
+}
+.inline-icon {
+	display: inline;
+	height: 20px;
+}
+.treasure {
+	position: absolute;
+	z-index: 3;
+}
+.treasure-box .treasure-preview,
+.treasure-input:nth-child(1):checked ~ .hunting-ground .treasure:nth-child(1),
+.treasure-input:nth-child(2):checked ~ .hunting-ground .treasure:nth-child(2),
+.treasure-input:nth-child(3):checked ~ .hunting-ground .treasure:nth-child(3)
+{
+	display: none;
+}
+.treasure-input:nth-child(1):checked ~ .treasure-box .treasure-preview:nth-child(1),
+.treasure-input:nth-child(2):checked ~ .treasure-box .treasure-preview:nth-child(2),
+.treasure-input:nth-child(3):checked ~ .treasure-box .treasure-preview:nth-child(3)
+{
+	display: unset;
+}
+
+.treasure-input:checked ~ main .speech-bubble .speech-bubble-content .progress {
+	visibility:visible;
+}
+.treasure-input:not(:checked) ~ main .speech-bubble .speech-bubble-content .progress {
+	visibility: hidden;
+}
+
+.treasure-box {
+	position: absolute;
+	z-index: 3;
+	left: 1462px;
+	top: 925px;
+	padding: 10px;
+	background: #3b3b3b;
+}
+main {
+	position: absolute;
+	left: 0px;
+	top: 50px;
+	display: flex;
+	flex-direction: column;
+
+}
+.speech-triangle {
+width: 0; 
+height: 0; 
+margin-left: 100px;
+border-left: 60px solid transparent;
+border-right: 60px solid transparent;
+border-top: 150px solid lightcyan;
+}
+#background {
+	position: absolute;
+}
+.furniture {
+	position: absolute;
+	z-index: 2;
+}
+.characters * {
+	display: none;
+	height: 500px;
+}
+#p1:checked ~ .characters #manic,
+#p2:checked ~ .characters #manic,
+#p3:checked ~ .characters #cough,
+#p4:checked ~ .characters #talk1,
+#p5:checked ~ .characters #talk1,
+#p6:checked ~ .characters #talk2,
+#p7:checked ~ .characters #plot,
+#p8:checked ~ .characters #talk2,
+#p9:checked ~ .characters #nom,
+#p10:checked ~ .characters #nom,
+#p11:checked ~ .characters #nom
+{
+	display: unset;
+}
+
+
+
+
+#fireplace {
+	left: 1215px;
+	top: 445px;
+}
+#table {
+	left: 400px;
+	top: 645px;
+}
+#shelves {
+	left: 330px;
+	top: 240px;
+}
+.treasure:nth-child(1) {
+	left: 400px;
+	top: 430px;
+	transform: scaleX(-1);
+}
+.treasure:nth-child(2) {
+	left: 1000px;
+	top: 830px;
+}
+.treasure:nth-child(3) {
+	left: 1280px;
+	top: 450px;
+}
+

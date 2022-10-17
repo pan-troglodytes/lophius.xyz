@@ -1,0 +1,69 @@
+#image {
+	position: fixed;
+	background-color: #000000;
+	height: 100vh;
+	width: 100vw;
+	z-index: 2;
+}
+#overlay {
+	position: fixed;
+	background-image: url("spook.png");
+	height: 100vh;
+	width: 100vw;
+	z-index: 4;
+}
+.movable-textarea {
+    position: relative;
+    margin: 20px 0 0 20px;
+	background-color: transparent;
+    z-index: 1;
+	color: transparent;
+}
+.movable {
+    position: relative;
+    display: inline-block;
+}
+.handle {
+	padding: 32px;
+	background-image: url(torch.png);
+    position: absolute;
+    bottom: -20px;
+    right: -32px;
+    z-index: 5;
+}
+.escape {
+	padding: 16px;
+    position: absolute;
+    z-index: 1;
+}
+
+#escape1 {
+    right: 0px;
+    bottom: 12px;
+}
+#escape2 {
+    right: 12px;
+    bottom: 0px;
+}
+#light {
+	border-radius: 100%;
+	position: absolute;
+	padding: 128px;
+	background-color: #fff2d0;
+    right: -186px;
+    bottom: 64px;
+	z-index: 3;
+}
+.handle:hover ~ .movable-textarea {
+	z-index: 6;
+}
+.movable-textarea:hover {
+	z-index: 6;
+}
+.movable-textarea:hover ~ .escape {
+	z-index: 7;
+}
+
+.escape:hover {
+	z-index: 7;
+}

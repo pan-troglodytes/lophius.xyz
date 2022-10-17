@@ -1,0 +1,14 @@
+body {
+	background: url("flower-dark.png");
+}
+#putrid {
+	position: relative;
+	width: 280px;
+	height: 520px;
+	background-image: url(putrid.png);
+}
+#putrid img {
+	position: absolute;
+	left: 100px;
+	top: 280px;
+}
