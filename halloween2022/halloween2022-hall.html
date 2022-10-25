@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>hall of bones</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../general.css">
+<link rel="stylesheet" href="treasure-hunt.css">
+<link rel="stylesheet" href="halloween2022-hall.css">
+<body>
+<section class="treasure-hunt">
+	<input type="checkbox" class="treasure-input" name="treasure1" id="t1">
+	<input type="checkbox" class="treasure-input" name="treasure2" id="t2">
+	<input type="checkbox" class="treasure-input" name="treasure3" id="t3">
+	<input type="checkbox" class="treasure-input" name="treasure4" id="t4">
+	<input type="checkbox" class="treasure-input" name="treasure5" id="t5">
+	<input type="checkbox" class="treasure-input" name="treasure6" id="t6">
+	<img src="hall-of-bones.png" id="background">
+	<section class="hunting-ground"> 
+		<img src=bone.png class="circle" draggable=false>
+		<img src=bone.png class="circle" draggable=false>
+		<img src=bone.png class="circle" draggable=false>
+		<label for=t1 class="treasure circle" draggable=false><img src=krooked-leg.png></label>
+		<img src=bone.png class="circle" draggable=false>
+		<img src=bone.png class="circle" draggable=false>
+		<img src=bone.png class="circle" draggable=false>
+		<img src=bone.png class="circle" draggable=false>
+		<img src=bone.png class="circle" draggable=false>
+		<img src=bone.png class="circle" draggable=false>
+		<img src=bone.png class="circle" draggable=false>
+		<img src=bone.png class="circle" draggable=false>
+		<label for=t5 class="treasure circle"><img src="krooked-spine.png"></label>
+		<img src=bone.png class="circle" draggable=false>
+		<img src=bone.png class="circle" draggable=false>
+		<img src=bone.png class="circle" draggable=false>
+		<img src=bone.png class="circle" draggable=false>
+		<img src=bone.png class="circle" draggable=false>
+		<label for=t3 class="treasure circle"><img src=krooked-arm.png></label>
+		<img src=bone.png class="circle" draggable=false>
+		<img src=bone.png class="sine" draggable=false>
+		<img src=bone.png class="sine" draggable=false>
+		<img src=bone.png class="sine" draggable=false>
+		<img src=bone.png class="sine" draggable=false>
+		<img src=bone.png class="sine" draggable=false>
+		<img src=bone.png class="sine" draggable=false>
+		<img src=bone.png class="sine" draggable=false>
+		<img src=bone.png class="sine" draggable=false>
+		<label for=t6 class="treasure sine"><img src="krooked-ribcage.png" alt="bone"></label>
+		<img src=bone.png class="sine" draggable=false>
+		<img src=bone.png class="sine" draggable=false>
+		<img src=bone.png class="sine" draggable=false>
+		<img src=bone.png class="sine" draggable=false>
+		<img src=bone.png class="sine" draggable=false>
+		<img src=bone.png class="sine" draggable=false>
+		<img src=bone.png class="sine" draggable=false>
+		<img src=bone.png class="sine" draggable=false>
+		<img src=bone.png class="sine" draggable=false>
+		<img src=bone.png class="sine" draggable=false>
+		<img src=bone.png class="sine" draggable=false>
+		<label for=t4 class="treasure sine"><img style="transform: scaleX(-1)" src=krooked-arm.png></label>
+		<img src=bone.png class="sine" draggable=false>
+		<img src=bone.png class="sine" draggable=false>
+		<img src=bone.png class="sine" draggable=false>
+		<img src=bone.png class="sine" draggable=false>
+		<img src=bone.png class="sine" draggable=false>
+		<img src=bone.png class="sine" draggable=false>
+		<img src=bone.png class="sine" draggable=false>
+		<img src=bone.png class="sine" draggable=false>
+		<img src=bone.png class="sine" draggable=false>
+		<img src=bone.png class="sine" draggable=false>
+		<img src=bone.png class="sine" draggable=false>
+		<label for=t2 class="treasure sine"><img style="transform: scaleX(-1)" src=krooked-leg.png></label>
+		<img src=bone.png class="sine" draggable=false>
+		<img src=bone.png class="sine" draggable=false>
+		<img src=bone.png class="sine" draggable=false>
+		<img src=bone.png class="sine" draggable=false>
+		<img src=bone.png class="sine" draggable=false>
+		<img src=bone.png class="sine" draggable=false>
+		<img src=bone.png class="sine" draggable=false>
+		<img src=bone.png class="sine" draggable=false>
+	</section>
+	<section class="treasure-box">
+		<img class="treasure-preview" src= krooked-leg.png>
+		<img class="treasure-preview" style="transform: scaleX(-1)" src=krooked-leg.png>
+		<img class="treasure-preview" src=krooked-arm.png>
+		<img class="treasure-preview" style="transform: scaleX(-1)" src=krooked-arm.png>
+		<img class="treasure-preview" src=krooked-spine.png>
+		<img class="treasure-preview" src=krooked-ribcage.png>
+		<p>bones found</p>
+	</section>
+	<main>
+		<section class="speech-bubble">
+			<input type="radio" name="speech1" id="p1" checked>
+			<section class="speech-bubble-content">
+				<p>
+					greetings, and welcome to the hall of bones
+				</p>
+				<br>
+				<label for="p2">next</label>
+			</section>
+			<input type="radio" name="speech1" id="p2">
+			<section class="speech-bubble-content">
+				<p>
+					my name is king kalvaria the krooked and i am the HEAD of the spooky corner
+				</p>
+				<br>
+				<label for="p1">prev</label>
+				<label for="p3">next</label>
+			</section>
+			<input type="radio" name="speech1" id="p3">
+			<section class="speech-bubble-content">
+				<p>
+					and i used to be much more than the head, ya know
+				</p>
+				<br>
+				<label for="p2">prev</label>
+				<label for="p4">next</label>
+			</section>
+			<input type="radio" name="speech1" id="p4">
+			<section class="speech-bubble-content">
+				<p>
+					had an pelvis, spine... a whole load of ribs...
+				</p>
+				<br>
+				<label for="p3">prev</label>
+				<label for="p5" >next</label>
+			</section>
+			<input type="radio" name="speech1" id="p5">
+			<section class="speech-bubble-content">
+				<p>
+					its just that i lost all my other bones
+				</p>
+				<br>
+				<label for="p4">prev</label>
+				<label for="p6" >next</label>
+			</section>
+			<input type="radio" name="speech1" id="p6">
+			<section class="speech-bubble-content">
+				<p>
+					you see when you live in a room surrounded by body parts you tend to forget which are yours
+				</p>
+				<br>
+				<label for="p5">prev</label>
+				<label for="p7" >next</label>
+			</section>
+			<input type="radio" name="speech1" id="p7">
+			<section class="speech-bubble-content">
+				<p>
+					do you think you could give me a hand... and the other one.. also some feet?
+				</p>
+				<br>
+				<label for="p6">prev</label>
+				<label for="p8" >next</label>
+			</section>
+			<input type="radio" name="speech1" id="p8">
+			<section class="speech-bubble-content">
+				<p>
+					you should be able to find in here my spine, ribcage, 2 arms and 2 legs. but dont get confused by all the other bones
+
+				</p>
+				<br>
+				<label for="p7">prev</label>
+				<br>
+				<label for="p9" class="progress">return bones</label>
+			</section>
+			<input type="radio" name="speech1" id="p9">
+			<section class="speech-bubble-content">
+				<p>
+					MWAaAHAHAHAHAAHAHA
+				</p>
+				<br>
+				<label for="p8">prev</label>
+				<label for="p10">next</label>
+			</section>
+			<input type="radio" name="speech1" id="p10">
+			<section class="speech-bubble-content">
+				<p>
+					YOU FOOL, YOU SHOULD HAVE NEVER TRUSTED ME 
+				</p>
+				<br>
+				<label for="p9">prev</label>
+				<label for="p11">next</label>
+			</section>
+			<input type="radio" name="speech1" id="p11">
+			<section class="speech-bubble-content">
+				<p>
+					NOW YOU ARE STUCK HERE WITH ME FOREVER MWHAHAHAHAA
+					AND ALL OF YOUR TREATS FROM THE GARDEN ARE MINE
+				</p>
+				<br>
+				<label for="p10">prev</label>
+				<br>
+				<label for="p12">take your revenge</label>
+			</section>
+			<input type="radio" name="speech1" id="p12">
+			<section class="speech-bubble-content">
+				<p>
+					oh dear what have you done?
+				</p>
+				<br>
+				<label for="p11">prev</label>
+				<label for="p13">next</label>
+			</section>
+			<input type="radio" name="speech1" id="p13">
+			<section class="speech-bubble-content">
+				<p>
+					youve flipped upside down?
+					<br>
+					oh wait no.. oh gosh, my head is not supposed to be down here
+				</p>
+				<br>
+				<label for="p12">prev</label>
+				<label for="p14">next</label>
+			</section>
+			<input type="radio" name="speech1" id="p14">
+			<section class="speech-bubble-content">
+				<p>
+					please put me back, please
+				</p>
+				<br>
+				<label for="p13">prev</label>
+				<br>
+				<label for="p15">restore kalvaria's bones</label>
+			</section>
+			<input type="radio" name="speech1" id="p15">
+			<section class="speech-bubble-content">
+				<p>
+					phew oh dear, leave. just leave. i dont want anymore of your tricks
+					and i dont even want your treats, you win! 
+				</p>
+				<br>
+				<label for="p14">prev</label>
+				<br>
+				<a href="halloween2022-treats.html">celebrate victory</a>
+			</section>
+			<div class="speech-triangle"></div>
+			<div class="characters">
+				<img src=krooked-head-crop.png id=head>
+				<img src=krooked-laugh-crop.png id=laugh>
+				<img src=krooked-spook-crop.png id=spook>
+				<img src=krooked-plot-crop.png id=plot>
+				<img src=krooked-tricked-crop.png id=tricked>
+				<img src=krooked-confused-crop.png id=confused>
+			</div>
+		</section>
+	</main>
+</section>
+</body>
+</html>

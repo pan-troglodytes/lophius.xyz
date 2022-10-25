@@ -1,34 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <meta charset="UTF-8">
-<title>thing</title>
+<title>garden</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="general.css">
+<link rel="stylesheet" href="../general.css">
 <link rel="stylesheet" href="treasure-hunt.css">
 <link rel="stylesheet" href="halloween2022-garden.css">
 <body>
 <section class="treasure-hunt">
-	<input type="checkbox" class="treasure-input" name="treasure1" id="t1">
-	<input type="checkbox" class="treasure-input" name="treasure1" id="t2">
-	<input type="checkbox" class="treasure-input" name="treasure1" id="t3">
+	<!-- checkboxes are hidden, they will be selected by clicking labels, each containing an image of the treasure -->
+	<!-- checkboxes must be all the way up here so that when checked, in css following elements can be selected with the ~ operator -->
+	<input type="checkbox" class="treasure-input" name="treasure" id="t1">
+	<input type="checkbox" class="treasure-input" name="treasure" id="t2">
+	<input type="checkbox" class="treasure-input" name="treasure" id="t3">
+	<!-- pitch black background -->
 	<img src="night.png" id="background">
+	<!-- image of silhouettes, the same colour as the background -->
 	<img src="spooky-garden.png" id="overlay">
+	<!-- trolls are part of the silhouette that not just blend in, but completely turn invisible sometimes -->
 	<img src="spooky-zombiehand.png" id="zombiehand" class="troll">
 	<img src="spooky-pumpkinface.png" id="pumpkinface" class="troll">
 	<img src="spooky-maneatereye.png" id="maneatereye" class="troll">
 	<img src="spooky-figure.png" id="figure" class="troll">
 	<img src="spooky-stars.png" id="stars" class="troll">
-	<section class="hunting-ground" class="troll"> 
+	<!-- the treasure -->
+	<section class="hunting-ground"> 
 		<label for="t1" class="treasure"><img src="spooky-candy.png"></label>
 		<label for="t2" class="treasure"><img src="spooky-candy.png"></label>
 		<label for="t3" class="treasure"><img src="spooky-candy.png"></label>
 	</section>
+	<!-- preview of treasures collected-->
 	<section class="treasure-box">
 		<img class="treasure-preview" src="spooky-candy.png">
 		<img class="treasure-preview" src="spooky-candy.png">
 		<img class="treasure-preview" src="spooky-candy.png">
 		<p>treats found</p>
 	</section>
+	<!-- the torch in all its movable glory, by anchoring it to a textbox, moving as the textbox is resized -->
+	<!-- .handle is the torch, .escape prevent clicking on the textbox, .light is a circle of a ccontrasting colour
+		from the background and overlay silhouettes that sits beween the two -->
 	<div class="wrapper">
 	<div class="movable">
 		<div class="handle"></div>
@@ -39,8 +49,10 @@
 	</div>
 	</div>
 	<main>
+		<!-- all .speech-bubble-contents are hidden unless the radio button before them
+			is selected -->
 		<section class="speech-bubble">
-			<input type="radio" name="speech1" id="p1" checked>
+			<input type="radio" name="speech" id="p1" checked>
 			<section class="speech-bubble-content">
 				<p>
 					its so spoooky and dark here in the garden
@@ -48,7 +60,7 @@
 				<br>
 				<label for="p2">next</label>
 			</section>
-			<input type="radio" name="speech1" id="p2">
+			<input type="radio" name="speech" id="p2">
 			<section class="speech-bubble-content">
 				<p>
 					its so worth being here tho, this place is loaded with treats!
@@ -57,7 +69,7 @@
 				<label for="p1">prev</label>
 				<label for="p3">next</label>
 			</section>
-			<input type="radio" name="speech1" id="p3">
+			<input type="radio" name="speech" id="p3">
 			<section class="speech-bubble-content">
 				<p>
 					first we have to deal with all the darkness
@@ -66,7 +78,7 @@
 				<label for="p2">prev</label>
 				<label for="p4">next</label>
 			</section>
-			<input type="radio" name="speech1" id="p4">
+			<input type="radio" name="speech" id="p4">
 			<section class="speech-bubble-content">
 				<p>
 					grab the flashlight on the top left of the screen to brighten up parts of the garden
@@ -75,31 +87,30 @@
 				<label for="p3">prev</label>
 				<label for="p5">next</label>
 			</section>
-			<input type="radio" name="speech1" id="p5">
+			<input type="radio" name="speech" id="p5">
 			<section class="speech-bubble-content">
 				<p>
 				<b>to click <img class="inline-icon" src="torch.png"> flashlight, aim 
 				for the centre of the handle, drag it when you have a grip. when you find a treat you can let go of the
 				flashlight to click the treats, all 3 of which look like this: <img class="inline-icon" src="spooky-candy.png"> </b>
 				</p>
-				<br>
 				<label for="p4">prev</label>
 				<br>
 				<label for="p6" class="progress">show treats</label>
 			</section>
-			<input type="radio" name="speech1" id="p6">
+			<input type="radio" name="speech" id="p6">
 			<section class="speech-bubble-content">
 				<p>
-					congrats! i think id rather stick with brains however
+					congrats! i think id rather stick with brains however.
 					<br>
-					aslong as we're both happy!
+					time to leave the garden, i cant come with you as its 2spooky4me in the hall of bones 
 				</p>
 				<label for="p5">prev</label>
 				<br>
-				<br>
-				<a href="halloween2022-treats.html"> leave garden</a>
+				<a href="halloween2022-hall.html">leave garden</a>
 			</section>
 			<div class="speech-triangle"></div>
+			<!-- each radio button display speech bubble content when checked will also display an image -->
 			<div class="characters">
 				<img src="cadaver-manic-crop.png" id="manic">
 				<img src="cadaver-cough-crop.png" id="cough">

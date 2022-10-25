@@ -54,6 +54,16 @@
 	grid-row-start: 8;
 	grid-row-end: 9;
 }
+#spooky {
+	margin-left: 100px;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start:4;
+	grid-row-end: 5;
+}
+#spooky img {
+	width: 128px;
+}
 
 .star, .planet {
 	text-align: center;
@@ -117,8 +127,13 @@ img {
 * {
 	cursor: url("saucer.png"), auto;
 }
+#spook {
+	position: absolute;
+	left: 40px;
+	top: 400px;
+	text-align: center;
+}
 @keyframes float {
 	0% {transform: translate(0px, 10px)};
 	100% {transform: translate(0px, 0px)};
 }
-

@@ -1,0 +1,52 @@
+.furniture {
+	position: absolute;
+	z-index: 2;
+}
+.characters * {
+	display: none;
+	height: 500px;
+}
+#p1:checked ~ .characters #manic,
+#p2:checked ~ .characters #manic,
+#p3:checked ~ .characters #cough,
+#p4:checked ~ .characters #talk1,
+#p5:checked ~ .characters #talk1,
+#p6:checked ~ .characters #talk2,
+#p7:checked ~ .characters #plot,
+#p8:checked ~ .characters #talk2,
+#p9:checked ~ .characters #nom,
+#p10:checked ~ .characters #nom,
+#p11:checked ~ .characters #nom
+{
+	display: unset;
+}
+
+
+
+
+#fireplace {
+	left: 1215px;
+	top: 445px;
+}
+#table {
+	left: 400px;
+	top: 645px;
+}
+#shelves {
+	left: 330px;
+	top: 240px;
+}
+.treasure:nth-child(1) {
+	left: 400px;
+	top: 430px;
+	transform: scaleX(-1);
+}
+.treasure:nth-child(2) {
+	left: 1000px;
+	top: 830px;
+}
+.treasure:nth-child(3) {
+	left: 1280px;
+	top: 450px;
+}
+

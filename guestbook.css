@@ -86,7 +86,6 @@ input[type=submit]:hover, input[type=submit]:focus {
 	text-decoration: underline dashed 2px;
 	animation-iteration-count: 0;
 	background: #cbeae6 !important;
-	border-image: url("button-border.png") 11 round;
 }
 label {
 	display: inline-block;

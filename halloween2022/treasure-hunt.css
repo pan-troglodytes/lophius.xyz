@@ -39,15 +39,21 @@ input[type=radio]:checked + .speech-bubble-content {
 	z-index: 3;
 }
 .treasure-box .treasure-preview,
-.treasure-input:nth-child(1):checked ~ .hunting-ground .treasure:nth-child(1),
-.treasure-input:nth-child(2):checked ~ .hunting-ground .treasure:nth-child(2),
-.treasure-input:nth-child(3):checked ~ .hunting-ground .treasure:nth-child(3)
+.treasure-input:nth-child(1):checked ~ .hunting-ground .treasure[for=t1],
+.treasure-input:nth-child(2):checked ~ .hunting-ground .treasure[for=t2],
+.treasure-input:nth-child(3):checked ~ .hunting-ground .treasure[for=t3],
+.treasure-input:nth-child(4):checked ~ .hunting-ground .treasure[for=t4],
+.treasure-input:nth-child(5):checked ~ .hunting-ground .treasure[for=t5],
+.treasure-input:nth-child(6):checked ~ .hunting-ground .treasure[for=t6]
 {
 	display: none;
 }
 .treasure-input:nth-child(1):checked ~ .treasure-box .treasure-preview:nth-child(1),
 .treasure-input:nth-child(2):checked ~ .treasure-box .treasure-preview:nth-child(2),
-.treasure-input:nth-child(3):checked ~ .treasure-box .treasure-preview:nth-child(3)
+.treasure-input:nth-child(3):checked ~ .treasure-box .treasure-preview:nth-child(3),
+.treasure-input:nth-child(4):checked ~ .treasure-box .treasure-preview:nth-child(4),
+.treasure-input:nth-child(5):checked ~ .treasure-box .treasure-preview:nth-child(5),
+.treasure-input:nth-child(6):checked ~ .treasure-box .treasure-preview:nth-child(6)
 {
 	display: unset;
 }

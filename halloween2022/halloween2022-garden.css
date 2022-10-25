@@ -8,6 +8,12 @@ textarea {
 	position: absolute;
 	z-index: 4;
 }
+.overlay{
+	pointer-events: none;
+}
+.troll, .treasure {
+	user-select: none;
+}
 .wrapper {
 	position: absolute;
 	top: 0px;
@@ -26,7 +32,7 @@ main {
     z-index: 1;
 	color: transparent;
 	max-height: 96vh;
-	max-width: 89vw;
+	max-width: 80vw;
 }
 .movable {
     position: relative;
@@ -116,11 +122,13 @@ main {
 	max-width: 350px;
 }
 input[type=radio]:checked + .speech-bubble-content {
-	min-height: 300px;
-	max-height: 300px;
+	min-height: 330px;
+	max-height: 330px;
 }
+
 .treasure-box {
 	left: 1200px;
+	z-index: 4;
 }
 .treasure {
 	z-index: 5;
@@ -148,6 +156,8 @@ input[type=radio]:checked + .speech-bubble-content {
 #p6:checked ~ .characters #nom
 {
 	display: unset;
+	min-height: 490px;
+	max-height: 490px;
 }
 #p4:checked ~ .characters #plot {
 	transform: scaleX(-1);
