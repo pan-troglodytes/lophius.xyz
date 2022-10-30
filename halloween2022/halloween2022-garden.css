@@ -31,7 +31,7 @@ main {
 	background-color: transparent;
     z-index: 1;
 	color: transparent;
-	max-height: 96vh;
+	max-height: 95vh;
 	max-width: 80vw;
 }
 .movable {
@@ -122,8 +122,8 @@ main {
 	max-width: 350px;
 }
 input[type=radio]:checked + .speech-bubble-content {
-	min-height: 330px;
-	max-height: 330px;
+	min-height: 370px;
+	max-height: 370px;
 }
 
 .treasure-box {
@@ -145,8 +145,8 @@ input[type=radio]:checked + .speech-bubble-content {
 }
 .treasure:nth-child(3) {
 	position: absolute;
-	top: 925px;
-	left: 500px;
+	top: 770px;
+	left: 530px;
 }
 #p1:checked ~ .characters #cough, 
 #p2:checked ~ .characters #talk1,
@@ -156,8 +156,8 @@ input[type=radio]:checked + .speech-bubble-content {
 #p6:checked ~ .characters #nom
 {
 	display: unset;
-	min-height: 490px;
-	max-height: 490px;
+	min-height: 440px;
+	max-height: 440px;
 }
 #p4:checked ~ .characters #plot {
 	transform: scaleX(-1);
