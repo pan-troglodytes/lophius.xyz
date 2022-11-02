@@ -1,3 +1,4 @@
 *.kra
 *.kra~
 *.png~
+.env

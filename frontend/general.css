@@ -104,6 +104,11 @@ a .rainbow span{
 	transition: .3s;
 	transform: scale(1.1);
 }
+#copyleft {
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+}
 
 .a1 {
 	animation-delay: .0s;

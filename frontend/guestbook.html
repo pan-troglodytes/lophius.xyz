@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>guestbook</title>
+<link rel="shortcut icon" href="guestbook.png"/>
+<link rel="stylesheet" href="general.css">
+<link rel="stylesheet" href="guestbook.css">
+<body>
+	<nav class="home">
+		<a id="start" href="solar-system.html"><span class=rainbow><span class="a1">h</span><span class="a2">o</span><span class="a3">m</span><span class="a4">e</span></span></a>
+	</nav>
+	<h2>guestbook</h2>
+	<article id="guestbook">
+		<aside id="write">
+		<form>
+			<p id="guestbook-intro">thank you for stopping by, you can record your visit here</p>
+			<br>
+			<input type="radio" name="message-style" value="message-style1" id="message-style1" checked>
+			<input type="radio" name="message-style" value="message-style2" id="message-style2">
+			<input type="radio" name="message-style" value="message-style3" id="message-style3">
+			<label for="message">message*:</label><br>
+			<textarea id="message" name="message" rows="3" required></textarea><br>
+			<label for="name">name*:</label>
+			<input type="text" id="name" name="name" required><br>
+			<label for="email">email:</label>
+			<input type="email" id="email" name="email"><br>
+			<section id="email-info">
+				<p>if you want to modify/delete your comment later on you can request this to be done by emailing me with the email you provide here. i need to know your email in advanced so a random person cant just make a request to modify/delete your message. if you only want to share your email with me, and not have it displayed publicly, leave the following checkbox unchecked. if you dont care about modifying/deleting your message theres no need to provide an email</p>
+			</section>
+			<label for="show-email">publicly display email:</label>
+			<input type="checkbox" id="show-email" name="show-email" unchecked><br>
+			<label for="website">website:</label>
+			<input type="url" id="website" name="website"><br>
+			<section id="form-end">
+				<label class="inkjar" id="inkjar1" for="message-stylek1"><img src="ink-black.png" alt="black"></label>
+				<label class="inkjar" id="inkjar2" for="message-style2"><img src="ink-pink.png" alt="pink"></label>
+				<label class="inkjar" id="inkjar3" for="message-style3"><img src="ink-blue.png" alt="blue"></label>
+				<input id="submit" type="submit" value="send">
+				<p id="ink-preview"> ink colour </p>
+			</section>
+		</form>
+		</aside>
+		<div class="tab-message">
+			<a href="#end">skip all <!--%WEBSITESNO--> message links</a>
+		</div>
+		<article id="messages">
+			<!--%NEW_MESSAGE-->
+		</article>
+	</article>
+	<div class="tab-message">
+		<a id="end" href="#start">jump to first link</a>
+	</div>
+	<section id="copyleft">
+		<p>
+			backend: GNU AGPL - <a href="https://github.com/pan-troglodytes/lophius.xyz" target=_blank >source</a>
+		</p>
+	</section>
+</body>
+</html>

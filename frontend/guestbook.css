@@ -7,19 +7,19 @@ h2 {
 .message, a, label, input, textarea, p {
 	font-size: 25px;
 }
-#ink1:checked ~ input:not([type=submit]), #ink1:checked ~ textarea, #ink1:checked ~ #form-end p, .ink1{
+#message-style1:checked ~ input:not([type=submit]), #message-style1:checked ~ textarea, #message-style1:checked ~ #form-end p, .message-style1 * {
 	color: #333333;
 }
-#ink2:checked ~ input:not([type=submit]), #ink2:checked ~ textarea, #ink2:checked ~ #form-end p, .ink2 {
+#message-style2:checked ~ input:not([type=submit]), #message-style2:checked ~ textarea, #message-style2:checked ~ #form-end p, .message-style2 * {
 	color: #ff00ff;
 }
-#ink3:checked ~ input:not([type=submit]), #ink3:checked ~ textarea, #ink3:checked ~ #form-end p, .ink3 {
+#message-style3:checked ~ input:not([type=submit]), #message-style3:checked ~ textarea, #message-style3:checked ~ #form-end p, .message-style3 * {
 	color: #02b9b9;
 }
 
-#ink1:focus:not(:hover) ~ #form-end #inkjar1,
-#ink2:focus:not(:hover) ~ #form-end #inkjar2,
-#ink3:focus:not(:hover) ~ #form-end #inkjar3 {
+#message-style1:focus:not(:hover) ~ #form-end #inkjar1,
+#message-style2:focus:not(:hover) ~ #form-end #inkjar2,
+#message-style3:focus:not(:hover) ~ #form-end #inkjar3 {
 	z-index: 2;
 	border: 3px #b375d9 dashed;
 }
@@ -100,9 +100,6 @@ textarea, input:not([type=submit]) {
 	border-bottom: 2px #b375d9 dashed;
 	margin: 8px 8px 6px 8px;
 }
-textarea {
-	background-image: url("background-gallery.png");
-}
 #messages {
 	grid-row-start: 1;
 	grid-row-end: 2;
@@ -171,9 +168,12 @@ body {
 	word-wrap: break-word;
 	margin: 30px 0px;
 }
-pre {
+.message * {
 	white-space: pre-wrap;
 	background: #e9f7f5;
+}
+.message p {
+	margin:0px;
 }
 #write * {
 	background: #e9f7f5;
@@ -190,7 +190,7 @@ pre {
 #email-info {
 	display: none;
 }
-#guestbook-intro, #email-info  p{
+#guestbook-intro, #email-info p{
 	background: #e9f7f5;
 	box-shadow: 0px 0px 0px 12px #e9f7f5;
 }
