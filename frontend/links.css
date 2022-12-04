@@ -14,3 +14,33 @@ article + article {
 	box-shadow: 0 0 0 2px limegreen;
 	padding: 10px;
 }
+
+    
+#melonsurfclub-widget #Outer, #melonsurfclub-widget #Inner {
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform-box: fill-box;
+    transform-origin: center;
+    animation-fill-mode: forwards;
+    transition: 5s ease-in-out;
+	cursor: pointer;
+}
+#melonsurfclub-widget #Outer:hover {
+    animation-duration: 1s;
+}
+#melonsurfclub-widget #Inner:hover {
+    animation-duration: 0.5s;
+    animation-name: spin;
+}
+#melonsurfclub-widget #Outer {
+    animation-name: spin;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

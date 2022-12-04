@@ -6,17 +6,20 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 
 You should have received a copy of the GNU Affero General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.
 '''
-import os 
 import html #escape html code
 import mysql.connector #connect to mysql database
-import urllib.parse 
-import cgi # recive inpouts from html form
+import cgi # recieve inputs from html form
 import re #regular expressions
 import datetime # get date of form submissions
 from pytz import timezone # specify timezone
 from dotenv import dotenv_values # hide sensitive data
 # display html file
-with open("/var/www/lophius.xyz/guestbook.html","r") as f1, open("/var/www/lophius.xyz/guestbook-message.html","r") as f2, open("/var/www/lophius.xyz/guestbook-message-attribute.html","r") as f3, open("/var/www/lophius.xyz/guestbook-message-attribute-link.html","r") as f4:
+guestbookPath = "/var/www/lophius.xyz/guestbook.html"
+guestbookMessagePath = "/var/www/lophius.xyz/guestbook-message.html"
+guestbookMessageAttributePath = "/var/www/lophius.xyz/guestbook-message-attribute.html"
+guestbookMessageAttributeLinkPath = "/var/www/lophius.xyz/guestbook-message-attribute-link.html"
+
+with open(guestbookPath ,"r") as f1, open(guestbookMessagePath ,"r") as f2, open(guestbookMessageAttributePath ,"r") as f3, open(guestbookMessageAttributeLinkPath ,"r") as f4:
     websiteTemplate = f1.read()
     messageTemplate = f2.read()
     attributeTemplate = f3.read()
