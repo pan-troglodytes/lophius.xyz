@@ -214,3 +214,6 @@ body {
 hr { /* this is here so the page looks decent with my css disabled */
 	display: none;
 }
+.error {
+	color: #bc168b;
+}
