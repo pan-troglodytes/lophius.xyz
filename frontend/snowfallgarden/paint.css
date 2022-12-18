@@ -1,0 +1,112 @@
+body {
+	margin-bottom: 100vh; /*let user view snowflakes against background image*/
+}
+main {
+	display: grid;
+	justify-items: start;
+	align-items: start;
+	grid-template-columns: 1.5fr 1fr;
+	grid-template-rows: .1fr 1fr;
+}
+input, textarea {
+	font-size: 20px;
+}
+input[type=submit] {
+	padding: 5px;
+}
+input[type=color] {
+	width: 30px;
+	height: 30px;
+	display:inline;
+	background: transparent;
+}
+textarea {
+	width: 100%;
+}
+
+
+
+#snowflake-canvas {
+        border: 10px solid black;
+	display:inline;
+}
+#snowflake-canvas-setup {
+	display: block;
+	margin: 100px auto;
+	width: 50vw;
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	justify-items: start;
+	align-items: center;
+}
+#snowflake-canvas-setup p{
+	text-align: center;
+	grid-column-start: 3;
+	grid-row-start: 1;
+}
+#new-canvas {
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 1;
+}
+
+label[for=image-input] {
+	grid-column-start: 4;
+	grid-column-end: 6;
+	grid-row-start: 1;
+}
+#image-input {
+	grid-column-start: 4;
+	grid-column-end: 6;
+	grid-row-start: 2;
+}
+
+label[for=snowflake-canvas-x] {
+	grid-column-start: 1;
+	grid-row-start: 2;
+}
+#snowflake-canvas-x {
+	grid-column-start: 2;
+	grid-row-start: 2;
+}
+label[for=snowflake-canvas-y] {
+	grid-column-start: 1;
+	grid-row-start: 3;
+}
+#snowflake-canvas-y {
+	grid-column-start: 2;
+	grid-row-start: 3;
+}
+#snowflake-id, #snowflake-input {
+	position:absolute;left:-10000px;
+}
+
+#snowflake-maker {
+	grid-column-start: 1;
+	grid-row-start: 2;
+	display: none;
+}
+
+#tools {
+	display: inline-flex;
+	flex-direction: column;
+}
+
+
+
+#snowflake-publisher {
+	grid-column-start: 2;
+	grid-row-start: 2;
+	margin-left: 30%;
+}
+
+#snowflake-publisher #submit-p {
+	width: 400px;
+	position: absolute;
+}
+
+

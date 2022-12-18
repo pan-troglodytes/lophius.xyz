@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>snowfall garden</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="shortcut icon" href="icon-snowflake.png"/>
+<link rel="stylesheet" href="general.css">
+<link rel="stylesheet" href="paint.css">
+<script src="paint.js"></script>
+<!--%REDIRECT-->
+</head>
+<body>
+	<nav class="home">
+		<a href="index.html"><span class=rainbow><span class="a1">h</span><span class="a2">o</span><span class="a3">m</span><span class="a4">e</span></span></a>
+		-
+		<a href="social.html"><span class=rainbow><span class="a1">s</span><span class="a2">o</span><span class="a3">c</span><span class="a4">i</span><span class="a5">a</span><span class="a6">l</span></span></a>
+	</nav>
+	<h1> snowfall garden paint</h1>
+	<noscript>sorry, java script is required</noscript>
+	<main>
+	<section id="snowflake-canvas-setup" class="board">
+		<a id=new-canvas><img class=icon src="icon-newcanvas.png">new canvas</a>
+		<p>or</p>
+		<label for=image-input><img class=icon src="icon-upload.png">upload image</label>
+		<input type="file" id="image-input" name=image-input accept="image/jpeg, image/png, image/jpg">
+		<label for=snowflake-canvas-x>width:</label>
+		<input min=1 max= 65 value=65 id="snowflake-canvas-x" name="snowflake-canvas-x" type="number">
+		<label for=snowflake-canvas-y>height:</label>
+		<input min=1 max= 65 value=65 id="snowflake-canvas-y" name="snowflake-canvas-y" type="number">
+	</section>
+	<section id="snowflake-maker" class="board">
+		<section><canvas id="snowflake-canvas"></canvas></section>
+		<section id="tools">
+			<label for=paintbrush><input type="color" id="paintbrush" name="paintbrush" value="#ffffff">paintbrush</label><br>
+			<a id=erase><img class=icon src="icon-eraser.png">eraser</a>
+			<a id=picker><img class=icon src="icon-picker.png">picker</a>
+			<label for=mirror-x><img class=icon src="icon-mirror-x.png">mirror x <input type="checkbox" id="mirror-x" name="mirror-x" checked></label>
+			<label for=mirror-y><img class=icon src="icon-mirror-y.png">mirror y <input type="checkbox" id="mirror-y" name="mirror-y" checked></label>
+			
+			<a id=download><img class=icon src="icon-download.png">download</a>
+			
+			<a id=demo><img class=icon src="icon-snowflake.png">generate</a>
+		</section>
+	</section>
+	<section id="snowflake-publisher">
+		<form method=post class="board">
+			<label for=name>your name:</label><br>
+			<input id=name name=name required><br>
+			<label for=website>your website (optional):</label><br>
+			<input id=website name=website type=url><br>
+			<label for=comment>comment (optional):</label><br>
+			<textarea id=comment name=comment></textarea><br><br>
+			<p>its highly recomended that you download your image before publishing, incase something goes wrong</p>
+			<input type="submit" id="submit" value="publish" disabled>
+			<input id=snowflake-id name=id readonly> 
+			<input id=snowflake-input name=snowflake readonly >
+		</form>
+		<p id=submit-p> please generate your most recent changes before publishing </p>
+	</section>
+	</main>
+	<!--%TEST1-->
+	<!--%TEST2-->
+	<!--%TEST3-->
+	<!--%TEST4-->
+	<!--%TEST5-->
+	<!--%TEST6-->
+	<!--%TEST7-->
+	<!--%TEST8-->
+	<!--%TEST9-->
+	<!--%TEST10-->
+	<section>
+		<p>
+			backend: GNU AGPL - <a href="https://github.com/pan-troglodytes/lophius.xyz" target=_blank >source</a>
+		</p>
+	</section>
+</body>
+</html>
