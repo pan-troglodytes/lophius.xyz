@@ -16,8 +16,8 @@ h3 {
 	padding-top: 40px;
 }
 p, ul {
-	padding-top: 30px;
-	padding-left: 70px;
+	width: 85vw;
+	margin: 0 auto;
 }
 
 li {
