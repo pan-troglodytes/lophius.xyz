@@ -22,16 +22,13 @@
 <body> 
 	<nav id="solar-system">
 		<section id="lophius" class="star" >
-				<img src="planet-lophiusstar.png">
+			<img src="planet-lophiusstar.png">
 			<p class="star-text">
 				lophius.xyz
 			</p>
 		</section>
 		<section id="gallery" class="planet">
-			<p>
-				new artworks added!
-			</p>
-			<a href="gallery.html" id="start">
+			<a href="gallery.html">
 			<img src="planet-gallery.png">
 			<p class="planet-text">
 			<span class=rainbow><span class="a1">g</span><span class="a2">a</span><span class="a3">l</span><span class="a4">l</span><span class="a5">e</span><span class="a6">r</span><span class="a7">y</span></span>
@@ -78,6 +75,15 @@
 			</p>
 			</a> 
 		</section>
+		<section id="snowflake" class="planet">
+			<a href="https://lophius.xyz/snowfallgarden/index.html">
+			<img src="snowfallgarden/icon-snowflake.png">
+			<p class="planet-text" style=color:#ffffff;>
+			<span>checkout my latest project: snowfall garden!
+				</span>
+			</p>
+			</a> 
+		</section>
 		<section id="tor" class="planet">
 			<a href="http://nh2ofxcltqjvzsikv4ubmkjzcljivfhxpdzthpjz54oy3lbrkoswsvad.onion">
 			<img src="tor.png">
@@ -86,23 +92,23 @@
 			</p>
 			</a> 
 		</section>
-		<summary id="help" class="planet"> 
-			<img src="planet-help.png">
-		</summary>
-		<section id="help-sign">
-			<p>
-			welcome to the lophius star<!--%VISITORNO-->! navigate the solar system by moving your mouse to steer the flying saucer. click on a planet to land on and visit it
-			</p>
+		<section id="help" class="planet" > 
+			<img src="planet-help.png" id=start tabindex=1>
+			<section id="help-sign">
+				<p>
+				welcome to the lophius star<!--%VISITORNO-->! navigate the solar system by moving your mouse to steer the flying saucer. click on a planet to land on and visit it
+				</p>
+			</section>
 		</section>
 	</section>
 	</nav>
-	<section class="tab-message">
-		<a href="#start">jump to first link</a>
-	</section>
 	<section id="copyleft">
 		<p>
 			backend: GNU AGPL - <a href="https://github.com/pan-troglodytes/lophius.xyz" target=_blank >source</a>
 		</p>
+	</section>
+	<section class="tab-message">
+		<a href="#start">jump to first link</a>
 	</section>
 </body>
 </html> 

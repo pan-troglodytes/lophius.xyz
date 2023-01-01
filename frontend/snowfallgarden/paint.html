@@ -25,9 +25,32 @@
 		<label for=image-input><img class=icon src="icon-upload.png">upload image</label>
 		<input type="file" id="image-input" name=image-input accept="image/jpeg, image/png, image/jpg">
 		<label for=snowflake-canvas-x>width:</label>
-		<input min=1 max= 65 value=65 id="snowflake-canvas-x" name="snowflake-canvas-x" type="number">
+		<input min=1 max=65 value=35 id="snowflake-canvas-x" name="snowflake-canvas-x" type="number">
 		<label for=snowflake-canvas-y>height:</label>
-		<input min=1 max= 65 value=65 id="snowflake-canvas-y" name="snowflake-canvas-y" type="number">
+		<input min=1 max=65 value=35 id="snowflake-canvas-y" name="snowflake-canvas-y" type="number">
+		<div>
+			<style>
+				#tut {position: absolute; left: -30000px}
+				#tut:not(:checked) + label + p {
+					display: none;
+				}
+				#tut:checked + label + p {
+					display: inline;
+				}
+			</style>
+			<input id=tut type=checkbox>
+			<label for=tut>how to draw a snowflake</label>
+			<p>
+			<img src=tutorial.png><br>
+			1. canvas<br>
+			2. imagine a pizza in the canvas<br>
+			3. slice the pizza<br>
+			4. branches (branch vertical and horizontal lines off of the original diagonals, vice versa)<br>
+			5. random decorations (toppings)<br>
+			6. eat the pizza<br><br><br>
+			</p>
+		</div>
+
 	</section>
 	<section id="snowflake-maker" class="board">
 		<section><canvas id="snowflake-canvas"></canvas></section>
@@ -51,24 +74,14 @@
 			<input id=website name=website type=url><br>
 			<label for=comment>comment (optional):</label><br>
 			<textarea id=comment name=comment></textarea><br><br>
-			<p>its highly recomended that you download your image before publishing, incase something goes wrong</p>
-			<input type="submit" id="submit" value="publish" disabled>
+			<p>its highly recomended that you download your image before creating, incase something goes wrong</p>
+			<input type="submit" id="submit" value="create" disabled>
 			<input id=snowflake-id name=id readonly> 
 			<input id=snowflake-input name=snowflake readonly >
 		</form>
-		<p id=submit-p> please generate your most recent changes before publishing </p>
+		<p id=submit-p> please generate your most recent changes before creating </p>
 	</section>
 	</main>
-	<!--%TEST1-->
-	<!--%TEST2-->
-	<!--%TEST3-->
-	<!--%TEST4-->
-	<!--%TEST5-->
-	<!--%TEST6-->
-	<!--%TEST7-->
-	<!--%TEST8-->
-	<!--%TEST9-->
-	<!--%TEST10-->
 	<section>
 		<p>
 			backend: GNU AGPL - <a href="https://github.com/pan-troglodytes/lophius.xyz" target=_blank >source</a>

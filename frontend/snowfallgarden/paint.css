@@ -39,9 +39,14 @@ textarea {
 	grid-row-start: 1;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-rows: 30px 30px 30px 1fr;
 	justify-items: start;
 	align-items: center;
+}
+#snowflake-canvas-setup div{
+	grid-column-start: 1;
+	grid-column-end: 4;
+	grid-row-start: 4;
 }
 #snowflake-canvas-setup p{
 	text-align: center;

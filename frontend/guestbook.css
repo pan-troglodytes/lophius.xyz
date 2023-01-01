@@ -107,22 +107,6 @@ textarea, input:not([type=submit]) {
 	grid-column-end: 2;
 	margin-left: 5vw;
 }
-#write {
-	position: fixed;
-	max-width: 25vw;
-	min-width: 25vw;
-	top: 5vh;
-	left: 60vw;
-}
-
-#write textarea{
-	min-width: 100%;
-	max-width: 100%;
-}
-#write input:not([type=checkbox]):not([type=submit]) {
-	max-width: 100%;
-	min-width: 100%;
-}
 
 input[type=checkbox] {
 	appearance: none;
@@ -149,10 +133,6 @@ input:focus:not([type=submit]), textarea:focus {
 }
 
 
-#guestbook {
-	display: grid;
-	grid-template-columns: 55vw 45vw;
-}
 #test {
 	width: 100%;
 	height: 100%;
@@ -198,9 +178,9 @@ body {
 	display: unset;
 	position: fixed;
 	padding: 10px;
-	max-width: 25vw;
-	min-width: 25vw;
-	left: 35vw;
+	max-width: 85vw;
+	min-width: 85vw;
+	left: 5vw;
 	top: 10vh;
 	background: none;
 	border: 11px solid transparent;
@@ -216,4 +196,34 @@ hr { /* this is here so the page looks decent with my css disabled */
 }
 .error {
 	color: #bc168b;
+}
+@media only screen and (min-width: 600px) {
+	#guestbook {
+		display: grid;
+		grid-template-columns: 55vw 45vw;
+	}
+	#write {
+		position: fixed;
+		max-width: 25vw;
+		min-width: 25vw;
+		top: 5vh;
+		left: 60vw;
+	}
+	#email:focus ~ #email-info, 
+	#email:hover ~ #email-info,
+	#email-info:hover {
+		max-width: 25vw;
+		min-width: 25vw;
+		left: 35vw;
+		top: 10vh;
+	}
+
+	#write textarea{
+		min-width: 100%;
+		max-width: 100%;
+	}
+	#write input:not([type=checkbox]):not([type=submit]) {
+		max-width: 100%;
+		min-width: 100%;
+	}
 }

@@ -1,4 +1,9 @@
 
+.artwork:not(:target) input:focus ~ section center img{
+	animation-name: rainbow-shadow;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
 /* hide radio buttons, custom labels are used instead */
 input[type="radio"] {
     position: absolute;
@@ -284,10 +289,16 @@ a, a span, label{
 
 
 
-
-
-
-
-
-
-
+@media only screen and (max-width: 600px) {
+	.artwork:target {
+		top: 0;
+		height: 100%;
+		width: 100%;
+	}
+	h3 {
+		font-size: 2rem;
+	}
+	.artwork:target .artwork-images img, .artwork-images img {
+		height: 30vh;
+	}
+}	
