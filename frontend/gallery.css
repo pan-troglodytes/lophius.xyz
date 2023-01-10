@@ -1,9 +1,3 @@
-
-.artwork:not(:target) input:focus ~ section center img{
-	animation-name: rainbow-shadow;
-	animation-duration: 1s;
-	animation-iteration-count: infinite;
-}
 /* hide radio buttons, custom labels are used instead */
 input[type="radio"] {
     position: absolute;
@@ -11,11 +5,6 @@ input[type="radio"] {
     opacity: 0;
     width: 0;
     height: 0;
-}
-.artwork:not(:target) input[type="radio"]:focus ~ div div img{
-	animation-name: rainbow-shadow;
-	animation-duration: 1s;
-	animation-iteration-count: infinite;
 }
 
 body {
@@ -56,22 +45,32 @@ a {
 	background: #f7e0ac;
 }
 
+.artwork:not(:target) input:focus ~ section center img{
+	animation-name: rainbow-shadow;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
 
 .artwork img {
     height: 10vw;
 }
 
-/* hide these in unfocused state */
 .gallery-controls,
 .artwork-controls label,
 .artwork-description,
-.artwork:target .artwork-title a 
+.artwork:target .artwork-title a
 {
     display: none;
 }
 
 
-/* focused artwork */
+.artwork:target .gallery-controls,
+.artwork:target .artwork-controls label,
+.artwork:target .artwork-description
+{
+    display:unset;
+}
+
 .artwork:target {
     position: fixed;
 	display: flex;
@@ -91,18 +90,14 @@ a {
 	order: 3;
 }
 
-
 .artwork:target .artwork-description {
 	order: 4;
 }
  
-/* scales the image in proportion, to a good size */
 .artwork:target section img { 
     height: 20vw;
 }
 
-
-/* this are otherwised hidden when unfocused */
 .artwork-controls label {
 	height: 30px;
     background: #ab2652;
@@ -166,24 +161,12 @@ a {
 	grid-column: 13/14;
 }
 
-/* show these when artwork is focused */
-.artwork:target .gallery-controls,
-.artwork:target .artwork-description,
-.artwork:target .artwork-controls label 
-{
-    display:unset;
-}
-
-.artwork:target .gallery-controls a {
-	display: inline-block;
-}
 
 
-/* display image */
+
 
 /* hide all images */
-.art
-{
+.art {
     display: none;
 }
 

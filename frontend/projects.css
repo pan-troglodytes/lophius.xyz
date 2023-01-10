@@ -1,3 +1,50 @@
+#home h1 {
+	color: #222222;
+}
+
+.project-showcase {
+	padding: 10px;
+	background-color: #111111;
+}
+
+.project-description {
+	background-color: #111111;
+}
+
+.project-showcase img,
+.project-showcase video {
+	width: 30%;
+	display: inline;
+}
+
+body {
+	background-attachment: fixed;
+	background-image: url("background-projects.png");
+	font-size: 1.5em;
+}
+
+h1, p, label {
+    color: #eeeeee;
+    text-shadow: .1vh .1vh #00ffff;
+} 
+
+/* hide radio buttons, custom labels are used instead */
+input[type="radio"] {
+    position: absolute;
+    left: -300px;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+* {
+	cursor: url("cursor-projects-default.png"), auto;
+}
+a, a span, label{
+	cursor: url("cursor-projects-pointer.png") 8 0, auto ;
+}
+
+/* DESKTOP */
 @media only screen and (min-width: 600px) {
 	#bubble-body, #bubble-triangle, #narrator, #cloud, #home {
 		position: fixed;
@@ -78,6 +125,8 @@
 		padding-top: 10vh;
 	}
 }
+
+/* MOBILE */
 @media only screen and (max-width: 600px) {
 	.project {
 		padding: 5px;
@@ -89,55 +138,3 @@
 		display: none;
 	}
 }	
-
-
-
-
-.project-showcase {
-	padding: 10px;
-	background-color: #111111;
-}
-
-.project-description {
-	background-color: #111111;
-}
-#home h1 {
-	color: #222222;
-}
-
-
-
-body {
-	background-attachment: fixed;
-	background-image: url("background-projects.png");
-	font-size: 1.5em;
-}
-
-h1, p, label {
-    color: #eeeeee;
-    text-shadow: .1vh .1vh #00ffff;
-} 
-
-/* hide radio buttons, custom labels are used instead */
-input[type="radio"] {
-    position: absolute;
-    left: -300px;
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-
-.project-showcase img,
-.project-showcase video {
-	width: 30%;
-	display: inline;
-}
-
-* {
-	cursor: url("cursor-projects-default.png"), auto;
-}
-a, a span, label{
-	cursor: url("cursor-projects-pointer.png") 8 0, auto ;
-}
-

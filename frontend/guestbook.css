@@ -7,19 +7,34 @@ h2 {
 .message, a, label, input, textarea, p {
 	font-size: 25px;
 }
-#message-style1:checked ~ input:not([type=submit]), #message-style1:checked ~ textarea, #message-style1:checked ~ #form-end p, .message-style1 * {
+
+#message-style1:checked ~ input:not([type=submit]),
+#message-style1:checked ~ textarea,
+#message-style1:checked ~ #form-end p,
+.message-style1 *
+{
 	color: #333333;
 }
-#message-style2:checked ~ input:not([type=submit]), #message-style2:checked ~ textarea, #message-style2:checked ~ #form-end p, .message-style2 * {
+
+#message-style2:checked ~ input:not([type=submit]),
+#message-style2:checked ~ textarea,
+#message-style2:checked ~ #form-end p,
+.message-style2 *
+{
 	color: #ff00ff;
 }
-#message-style3:checked ~ input:not([type=submit]), #message-style3:checked ~ textarea, #message-style3:checked ~ #form-end p, .message-style3 * {
+
+#message-style3:checked ~ input:not([type=submit]),
+#message-style3:checked ~ textarea,
+#message-style3:checked ~ #form-end p,
+.message-style3 *
+{
 	color: #02b9b9;
 }
 
-#message-style1:focus:not(:hover) ~ #form-end #inkjar1,
-#message-style2:focus:not(:hover) ~ #form-end #inkjar2,
-#message-style3:focus:not(:hover) ~ #form-end #inkjar3 {
+#message-style1:focus ~ #form-end #inkjar1,
+#message-style2:focus ~ #form-end #inkjar2,
+#message-style3:focus ~ #form-end #inkjar3 {
 	z-index: 2;
 	border: 3px #b375d9 dashed;
 }
@@ -85,7 +100,7 @@ input[type=submit] {
 input[type=submit]:hover, input[type=submit]:focus {
 	text-decoration: underline dashed 2px;
 	animation-iteration-count: 0;
-	background: #cbeae6 !important;
+	background: #cbeae6;
 }
 label {
 	display: inline-block;
@@ -197,6 +212,13 @@ hr { /* this is here so the page looks decent with my css disabled */
 .error {
 	color: #bc168b;
 }
+#write textarea,
+#write input:not([type=checkbox]):not([type=submit]) {
+	max-width: 100%;
+	min-width: 100%;
+}
+
+/* DESKTOP */
 @media only screen and (min-width: 600px) {
 	#guestbook {
 		display: grid;
@@ -218,12 +240,4 @@ hr { /* this is here so the page looks decent with my css disabled */
 		top: 10vh;
 	}
 
-	#write textarea{
-		min-width: 100%;
-		max-width: 100%;
-	}
-	#write input:not([type=checkbox]):not([type=submit]) {
-		max-width: 100%;
-		min-width: 100%;
-	}
 }
